@@ -41,7 +41,7 @@ class SessionForm extends React.Component {
       return (
         <div>
         <form onSubmit={this.handleSubmit}>
-          Please {this.props.header} or {this.props.navLink}
+          Please {this.props.header} or {this.props.link}
           <div>
             <label>Username:
               <input
