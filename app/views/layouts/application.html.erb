@@ -1,15 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WeAreStarters</title>
+    <title class="title">
+      <link rel="stylesheet" href="https://cdn.freebiesupply.com/logos/large/2x/kickstarter-2-logo-black-and-white.png">
+      WeAreStarters
+    </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">  </head>
+
   </head>
 
-  <body>
+  <body class="body">
+    <div class="relative">
+      <section class="nav-container">
+        <div class="">
+          <div class="relative m-auto bg-white w100p">
+            <div class="relative">
+              <div class="p0 flex z-dropdown-3 relative shadow-2 items-center">
+                <input type="text" name="" value="">
+                <div class="inline-block z-guided-search-3 relative">
+                  <button type="button" name="button"></button>
+                </div>
+              </div>
+              <div class="z-dropdown-3 scroll-y relative webkit-scrolling bg-white" style="height: 0px; opacity: 0; transition: all 0.3s ease 0s;" >
+                <ul class="mt3 mr0 ml0 mb1 p0 w100p"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden">
+
+        </div>
+        <section class="nav-bar-logo">
+          <a href="#"></a>
+          <img src="https://d3mlfyygrfdi2i.cloudfront.net/preview-logo-color.png" alt="">
+        </section>
+        <button class="explore-btn">Explore</button>
+        <section class="global-nav-left">
+          <a href="#" class="start-a-project-link">Start a project</a>
+        </section>
+        <section class="global-nav-right">
+        </section>
+      </section>
+    </div>
     <%= yield %>
   </body>
 </html>
