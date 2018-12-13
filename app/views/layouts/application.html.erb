@@ -9,12 +9,14 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">  </head>
+    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet"></head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   </head>
 
   <body class="body">
-    <div class="relative">
+    <!-- <div class="relative">
       <section class="nav-container">
         <section class="nav-bar-logo">
           <a class="logo-image-container" href="#/">
@@ -26,11 +28,13 @@
           <a href="#" class="start-a-project-link">Start a project</a>
         </section>
         <section class="nav-right">
-          <button class="search-btn">Search 🔍</button>
+          <button class="search-btn">
+            Search <br> <i class="fa fa-search"></i>
+          </button>
           <a class="sign-in-link" href="#/login">Sign In</a>
         </section>
       </section>
-    </div>
+    </div> -->
     <%= yield %>
   </body>
 </html>

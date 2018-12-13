@@ -23,6 +23,11 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state);
+    this.setState({
+          username: "",
+          emailAddress: "",
+          password: ""
+        })
   }
 
   demoLogin() {
@@ -42,11 +47,11 @@ class SessionForm extends React.Component {
         <div className='user-acct-form'>
         <div className='acct-form'>
         <form className='auth-form' onSubmit={this.handleSubmit}>
-          <h2>Sign Up</h2>
+          <h2 className='title'>Sign up</h2>
           <div className='form'>
           <ol >
             <li className='username'>
-              Username
+
               <input
                 className='username-input'
                 type="text"
@@ -55,8 +60,8 @@ class SessionForm extends React.Component {
               />
             </li>
             <br/>
-            <li lassName='email'>
-            Email
+            <li className='email'>
+
               <input
                 className='email-input'
                 type="email"
@@ -65,8 +70,8 @@ class SessionForm extends React.Component {
               />
             </li>
             <br/>
-            <li lassName='password'>
-              Password
+            <li className='password'>
+
               <input
                 className='password-input'
                 type="password"
@@ -92,31 +97,37 @@ class SessionForm extends React.Component {
       <div className='user-acct-form'>
       <div className='acct-form'>
         <form className='auth-form' onSubmit={this.handleSubmit}>
-          <h2>Log In</h2>
-          <div>
-            <label>Email Address:
+          <h2 className='title'>Log in</h2>
+          <div className='form'>
+          <ol >
+            <li className='email'>
+
               <input
-                type="text"
+                className='email-input'
+                type="email"
                 value={this.state.emailAddress}
                 onChange={this.update('emailAddress')}
               />
-            </label>
+            </li>
             <br/>
-            <label>Password:
+            <li className='password'>
               <input
-                className='password'
+                className='password-input'
                 type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
               />
-            </label>
+            </li>
             <br/>
             <br/>
             <input type="submit" value={this.props.formType} />
+          </ol>
           </div>
         </form>
         <footer className='auth-form-footer'>
           {this.props.link}
+          <br />
+          {this.props.linkText} <a type="submit" onClick={this.demoLogin} className='demo-login'>Sign in as a guest</a>
         </footer>
       </div>
       </div>

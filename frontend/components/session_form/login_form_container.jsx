@@ -8,7 +8,7 @@ const mapStateToProps = (state) => {
   return {
     buttonText: 'Log me in!',
     errors: Object.values(state.errors.session),
-    link: <Link to="/signup">Sign up!</Link>,
+    link: <Link to="/signup">Sign up</Link>,
     linkText: 'New to WeAreStarters?',
     header: 'Log in',
   }

@@ -136,7 +136,7 @@ ol {
   -webkit-margin-after: 1em;
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
-  -webkit-padding-start: 0px;
+  -webkit-padding-start: 40px;
 }
 
 ul, li {
@@ -182,6 +182,14 @@ label {
   cursor: default;
 }
 
+h2 {
+  display: block;
+  -webkit-margin-before: 0.83em;
+  -webkit-margin-after: 0.83em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
 
 .we-are-starters-header {
   color: #282828;
@@ -203,7 +211,7 @@ label {
   justify-content: space-between;
   background-color: #FFFFFF;
   border-color: #E8E8E8;
-  border-bottom: 0.1rem solid #DCDEDD;
+  border-bottom: 0.05rem solid #DCDEDD;
 }
 
 .nav-bar {
@@ -266,6 +274,10 @@ label {
   font-size: 0.9rem;
 }
 
+.explore-btn:hover {
+  color: green;
+}
+
 .start-a-project-link {
   padding-right: 1.8rem;
   margin-right: 1.2rem;
@@ -274,6 +286,10 @@ label {
   align-items: center;
   color: #282828;
   font-size: 0.9rem;
+}
+
+.start-a-project-link:hover {
+  color: green;
 }
 
 .nav-right {
@@ -302,10 +318,18 @@ label {
   font-size: 0.9rem;
 }
 
+.search-btn:hover {
+  color: green;
+}
+
 .sign-in-link {
   margin-left: 1.8rem;
   color: #282828;
   font-size: 0.9rem;
+}
+
+.sign-in-link:hover {
+  color: green;
 }
 
 .main-content {
@@ -369,4 +393,24 @@ label {
 
 .select, select, input {
     transition: all 300ms cubic-bezier(0.175, 0.885, 0.335, 1);
+}
+
+.demo-login {
+  border: 0;
+  font-family: inherit;
+  cursor: pointer;
+  line-height: unset !important;
+  padding: 0;
+  background: transparent;
+  -webkit-font-smoothing: inherit;
+  -webkit-appearance: link;
+}
+
+.title {
+  font-weight: normal;
+  margin-bottom: 30px;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: left;
+
 }
