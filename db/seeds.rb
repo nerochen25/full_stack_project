@@ -8,7 +8,7 @@
 User.delete_all
 
 demo1 = User.create!(
-  username: 'Demo User'
+  username: 'Demo User',
   email_address: 'username@gmail.com',
   password: 'password'
 )
