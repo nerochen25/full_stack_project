@@ -6,12 +6,12 @@ import ProjectContainer from './project/project_container';
 import {AuthRoute} from '../util/route_util';
 
 const App = () => (
-  <div>
+  <div className='main-content'>
     <header>
       <Link to='/'>
-        <h1 className='we-are-starters-header'>WeAreStarters</h1>
+        <h1 className='we-are-starters-header'></h1>
       </Link>
-      <ProjectContainer/>
+      <ProjectContainer className='project-container'/>
     </header>
     <AuthRoute exact path="/login" component={LogInFormContainer} />
     <AuthRoute exact path="/signup" component={SignUpFormContainer} />

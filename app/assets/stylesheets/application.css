@@ -22,7 +22,7 @@
 }
 
 body {
-  background-image: url('https://images.homedepot-static.com/productImages/65919f19-2a89-4390-a6c2-d83b30a39e0c/svn/tempaper-wallpaper-br096-64_1000.jpg');
+  /* background-color: #F7F7F6; */
   font-size: 1.4rem;
   line-height: 1.5;
   color: #282828;
@@ -126,6 +126,63 @@ input, textarea, select, button, meter, progress {
     -webkit-writing-mode: horizontal-tb !important;
 }
 
+fieldset ol {
+    list-style: none;
+}
+
+ol {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+input {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  margin: 0em;
+  font: 400 11px system-ui;
+}
+
+input, textarea, select, button, meter, progress {
+  -webkit-writing-mode: horizontal-tb !important;
+}
+
+fieldset ol>li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+label {
+  cursor: default;
+}
+
+
 .we-are-starters-header {
   color: #282828;
 }
@@ -164,7 +221,7 @@ input, textarea, select, button, meter, progress {
 }
 
 .nav-bar-logo {
-  height: 4.2rem;
+  height: 0.2rem;
   width: auto;
   padding-top: 1.2rem !important;
   padding-bottom: 1.2rem !important;
@@ -178,6 +235,14 @@ input, textarea, select, button, meter, progress {
   -webkit-box-align: center;
   align-items: center;
   display: flex;
+}
+
+.logo-image-container {
+  height: 43px;
+}
+.logo-image {
+  width: 220px;
+  height: auto;
 }
 
 .nav-left {
@@ -198,7 +263,7 @@ input, textarea, select, button, meter, progress {
   display: flex;
   background-color: #FFFFFF;
   color: #282828;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 
 .start-a-project-link {
@@ -208,6 +273,7 @@ input, textarea, select, button, meter, progress {
   -webkit-box-align: center;
   align-items: center;
   color: #282828;
+  font-size: 0.9rem;
 }
 
 .nav-right {
@@ -233,10 +299,74 @@ input, textarea, select, button, meter, progress {
   display: flex;
   fill: #282828;
   background-color: #FFFFFF;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 
 .sign-in-link {
   margin-left: 1.8rem;
   color: #282828;
+  font-size: 0.9rem;
+}
+
+.main-content {
+  display: block;
+  font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #F7F7F6;
+}
+
+.user-acct-form {
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+  padding-right: 1.8rem !important;
+  padding-left: 1.8rem !important;
+
+}
+
+.acct-form {
+  max-width: 400px;
+  margin: auto;
+}
+
+.auth-form {
+  background-color: #FFFFFF;
+  border-color: #F1EEEA;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  padding: 20px;
+}
+
+.auth-form-footer {
+  color: #282828;
+  background-color: rgba(241,238,234,0.2);
+  border-top: 1px solid #F1EEEA;
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #FFFFFF;
+  border-color: #F1EEEA;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  padding: 20px;
+}
+
+.form {
+  margin-bottom: 1.2rem;
+  list-style: none;
+}
+
+
+
+.form-simple input[type=text], .form-simple input[type=password], .form-simple input[type=tel], .form-simple input[type=email], .form-simple input[type=number] {
+  border-radius: 0;
+  box-sizing: border-box;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 17px;
+  -webkit-appearance: none;
+}
+
+.select, select, input {
+    transition: all 300ms cubic-bezier(0.175, 0.885, 0.335, 1);
 }

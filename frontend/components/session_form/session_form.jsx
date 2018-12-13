@@ -39,47 +39,60 @@ class SessionForm extends React.Component {
   render() {
     if (this.props.header === 'Sign up') {
       return (
-        <div>
-        <form onSubmit={this.handleSubmit}>
-          Please {this.props.header} or {this.props.link}
-          <div>
-            <label>Username:
+        <div className='user-acct-form'>
+        <div className='acct-form'>
+        <form className='auth-form' onSubmit={this.handleSubmit}>
+          <h2>Sign Up</h2>
+          <div className='form'>
+          <ol >
+            <li className='username'>
+              Username
               <input
+                className='username-input'
                 type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
               />
-            </label>
+            </li>
             <br/>
-            <label>Email Address:
+            <li lassName='email'>
+            Email
               <input
-                type="text"
+                className='email-input'
+                type="email"
                 value={this.state.emailAddress}
                 onChange={this.update('emailAddress')}
               />
-            </label>
+            </li>
             <br/>
-            <label>Password:
+            <li lassName='password'>
+              Password
               <input
-                className='password'
+                className='password-input'
                 type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
               />
-            </label>
+            </li>
             <br/>
             <br/>
             <input type="submit" value={this.props.formType} />
+          </ol>
           </div>
         </form>
+        <footer className='auth-form-footer'>
+          {this.props.link}
+        </footer>
+      </div>
       </div>
     )
 
     } else {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          Please {this.props.header} or {this.props.link}
+      <div className='user-acct-form'>
+      <div className='acct-form'>
+        <form className='auth-form' onSubmit={this.handleSubmit}>
+          <h2>Log In</h2>
           <div>
             <label>Email Address:
               <input
@@ -102,6 +115,10 @@ class SessionForm extends React.Component {
             <input type="submit" value={this.props.formType} />
           </div>
         </form>
+        <footer className='auth-form-footer'>
+          {this.props.link}
+        </footer>
+      </div>
       </div>
     );
   }
