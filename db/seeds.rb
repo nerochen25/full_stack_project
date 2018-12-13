@@ -14,7 +14,7 @@ demo1 = User.create!(
 )
 
 demo2 = User.create!(
-  username: 'Demo User2'
+  username: 'Demo User2',
   email_address: 'username2@gmail.com',
   password: 'password'
 )
