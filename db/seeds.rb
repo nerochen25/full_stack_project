@@ -18,3 +18,9 @@ demo2 = User.create!(
   email_address: 'username2@gmail.com',
   password: 'password'
 )
+
+demo3 = User.create!(
+  username: 'Demo User3',
+  email_address: 'username3@gmail.com',
+  password: 'password'
+)
