@@ -4,11 +4,17 @@ class User < ApplicationRecord
   validates :session_token, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
-  has_many :project_proposals, dependent: :destroy
-  has_many :pledges
-  has_many :supporting_projects, dependent: :destroy,
-    through: :pledges,
-    source: :project
+  has_many :project_proposals, dependent: :destroy,
+    class_name: 'Project',
+    foreign_key: :creator_id
+
+  # has_many :pledges, dependent: :destroy,
+  #   class_name: 'Pledge',
+  #   foreign_key: :supportor_id
+
+  # has_many :supporting_projects, dependent: :destroy,
+  #   through: :pledges,
+  #   source: :project
 
 
   attr_reader :password

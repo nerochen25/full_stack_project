@@ -1,13 +1,27 @@
 class Project < ApplicationRecord
   validates :title, :description, :creator_id, :category_id, :funding_goal, :due_date, presence: true
 
-  belongs_to :creator
-  belongs_to :category
-  has_many :backers
-  has_many :rewards, dependent: :destroy
-  has_many :pledges
+  belongs_to :creator,
+    class_name: 'User',
+    foreign_key: :creator_id
 
-  def backer_count
-    self.pledges.count
-  end
+  # belongs_to :category
+  #   class_name: 'Category',
+  #   foreign_key: :category_id
+
+  # has_many: :pledges, dependent: :destroy,
+  #   class_name: 'Pledge',
+  #   foreign_key: :project_id
+  #
+  # has_many :backers
+  #   through: :pledges,
+  #   source: :supporter
+  #
+  # has_many :rewards, dependent: :destroy
+  #   class_name: 'Reward',
+  #   foreign_key: :project_id
+
+  # def backer_count
+  #   self.pledges.count
+  # end
 end
