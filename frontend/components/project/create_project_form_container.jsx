@@ -1,7 +1,7 @@
-import { connet } from 'react-redux';
+import { connect } from 'react-redux';
 
 import ProjectForm from './project_form';
-import { creatProject } from '../../actions/project_actions';
+import { createProject } from '../../actions/project_actions';
 // import { fetchCategories } from '../../actions/category_actions';
 
 
@@ -26,7 +26,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    action: project => dispatch(creatProject(project)),
+    action: project => dispatch(createProject(project)),
     fetchCategories: () => dispatch(fetchCategories()),
     formType: 'Create Project',
   };

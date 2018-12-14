@@ -314,7 +314,7 @@ h2 {
   display: flex;
   fill: #282828;
   background-color: #FFFFFF;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .search-btn:hover {

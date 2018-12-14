@@ -6,6 +6,8 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import GreetingContainer from './greeting/greeting_container';
 import ProjectIndexContainer from './project/project_index_container';
+import CreateProjectFormContainer from './project/create_project_form_container';
+import EditProjectFormContainer from './project/edit_project_form_container';
 
 const App = () => (
 
@@ -40,6 +42,11 @@ const App = () => (
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
     </div>
     <Route exact path="/projects" component={ProjectIndexContainer} />
+    <ProtectedRoute exact path="/newproject/create" component={CreateProjectFormContainer} />
+    <ProtectedRoute exact path="/projects/:id/edit" component={EditProjectFormContainer} />
+    <div className='main-body'>
+      BODYYYY
+    </div>
     <footer className='footer'>
       FOOTER
     </footer>
