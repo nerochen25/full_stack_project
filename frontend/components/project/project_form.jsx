@@ -4,7 +4,7 @@ class ProjectForm extends React.Component {
   render(){
     return(
       <div>
-        HELLOO
+        Project Form
       </div>
     )
   }
