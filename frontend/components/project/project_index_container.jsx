@@ -18,10 +18,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchProjects: projects => dispatch((projects) => fetchProjects(projects)),
-    fetchUsers: users => dispatch((users) => fetchUsers(users)),
-    // fetchCategories: categories => dispatch((categories) => fetchCategories(categories)),
-    // fetchPledges: pledges => dispatch((pledges) => fetchPledges(pledges)),
+    fetchProjects: () => dispatch(fetchProjects()),
+    fetchUsers: () => dispatch(fetchUsers()),
+    // fetchCategories: () => dispatch(fetchCategories()),
+    // fetchPledges: () => dispatch(fetchPledges()),
   }
 }
 
