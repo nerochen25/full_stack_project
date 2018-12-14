@@ -4,6 +4,13 @@ class User < ApplicationRecord
   validates :session_token, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
+  has_many :project_proposals, dependent: :destroy
+  has_many :pledges
+  has_many :supporting_projects, dependent: :destroy,
+    through: :pledges,
+    source: :project
+
+
   attr_reader :password
   after_initialize :ensure_session_token
 

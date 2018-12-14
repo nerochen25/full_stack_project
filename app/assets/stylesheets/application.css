@@ -609,3 +609,7 @@ input text {
   font-weight: bold;
   color: blue;
 }
+.log-out-btn {
+  font-size: 12px;
+  -webkit-appearance: button;
+}
