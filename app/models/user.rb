@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :project_proposals, dependent: :destroy,
     class_name: 'Project',
     foreign_key: :creator_id
-
+  
   # has_many :pledges, dependent: :destroy,
   #   class_name: 'Pledge',
   #   foreign_key: :supportor_id
