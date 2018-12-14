@@ -31,6 +31,6 @@ project1 = Project.create!(
   creator_id: demo1.id,
   category_id: 1,
   funding_goal: 50000,
-  due_date:
-
+  due_date: Date.new,
+  reward_offered: true
 )
