@@ -49,13 +49,14 @@ class SessionForm extends React.Component {
         <form className='auth-form' onSubmit={this.handleSubmit}>
           <h2 className='title'>Sign up</h2>
           <div className='form'>
-          <ol >
+          <ol className='input-submit'>
             <li className='username'>
 
               <input
                 className='username-input'
                 type="text"
                 value={this.state.username}
+                placeholder='Name'
                 onChange={this.update('username')}
               />
             </li>
@@ -66,6 +67,7 @@ class SessionForm extends React.Component {
                 className='email-input'
                 type="email"
                 value={this.state.emailAddress}
+                placeholder='Email'
                 onChange={this.update('emailAddress')}
               />
             </li>
@@ -76,17 +78,23 @@ class SessionForm extends React.Component {
                 className='password-input'
                 type="password"
                 value={this.state.password}
+                placeholder='Password'
                 onChange={this.update('password')}
               />
             </li>
             <br/>
+            <label className='check-box-container'>
+              Receive a weekly mix of handpicked projects, plus occasional Kickstarter news.
+              <input className='checkbox' type='checkbox' checked='checked'/>
+              <span className='checkmark'></span>
+            </label>
             <br/>
-            <input type="submit" value={this.props.formType} />
+            <input className='submit-btn' type="submit" value='Create Account' />
           </ol>
           </div>
         </form>
         <footer className='auth-form-footer'>
-          {this.props.link}
+          {this.props.linkText} <p className='p-title'>{this.props.link}</p>
         </footer>
       </div>
       </div>
@@ -99,13 +107,14 @@ class SessionForm extends React.Component {
         <form className='auth-form' onSubmit={this.handleSubmit}>
           <h2 className='title'>Log in</h2>
           <div className='form'>
-          <ol >
+          <ol className='input-submit'>
             <li className='email'>
 
               <input
                 className='email-input'
                 type="email"
                 value={this.state.emailAddress}
+                placeholder='Email'
                 onChange={this.update('emailAddress')}
               />
             </li>
@@ -115,19 +124,20 @@ class SessionForm extends React.Component {
                 className='password-input'
                 type="password"
                 value={this.state.password}
+                placeholder='Password'
                 onChange={this.update('password')}
               />
             </li>
             <br/>
             <br/>
-            <input type="submit" value={this.props.formType} />
+            <input className='submit-btn' type="submit" value='Log me in!' />
           </ol>
           </div>
         </form>
         <footer className='auth-form-footer'>
-          {this.props.link}
+          <p className='p-title'>{this.props.link}</p>
           <br />
-          {this.props.linkText} <a type="submit" onClick={this.demoLogin} className='demo-login'>Sign in as a guest</a>
+          {this.props.linkText} <a type="text" onClick={this.demoLogin} className='demo-login' value='Sign in as a guest'>Sign in as a guest</a>
         </footer>
       </div>
       </div>

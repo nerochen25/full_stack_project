@@ -35,7 +35,12 @@ const App = () => (
     </header>
     <AuthRoute exact path="/login" component={LogInFormContainer} />
     <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+    <footer className='footer'>
+      FOOTER
+
+    </footer>
   </div>
+
 );
 
 export default App;
