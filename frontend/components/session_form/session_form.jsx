@@ -8,10 +8,12 @@ class SessionForm extends React.Component {
     this.state = {
       username: '',
       password: '',
-      emailAddress: ''
+      emailAddress: '',
+      check: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
+    this.isChecked = this.isChecked.bind(this);
   }
 
   update(field) {
@@ -19,6 +21,13 @@ class SessionForm extends React.Component {
       [field]: e.currentTarget.value
     });
   }
+
+  isChecked(e){
+    e.preventDefault();
+    this.setState({
+      check: true
+    });
+  };
 
   handleSubmit(e) {
     e.preventDefault();
@@ -85,7 +94,7 @@ class SessionForm extends React.Component {
             <br/>
             <label className='check-box-container'>
               Receive a weekly mix of handpicked projects, plus occasional Kickstarter news.
-              <input className='checkbox' type='checkbox' checked='checked'/>
+              <input className='checkbox' type='checkbox' checked='checked' onChange={this.isChecked}/>
               <span className='checkmark'></span>
             </label>
             <br/>

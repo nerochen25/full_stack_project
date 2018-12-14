@@ -228,9 +228,9 @@ h2 {
 }
 
 .nav-bar-logo {
-  height: 0.2rem;
+  height: 4.5rem;
   width: auto;
-  padding-top: 1.2rem !important;
+  padding-top: 0.2rem !important;
   padding-bottom: 1.2rem !important;
   -webkit-box-flex: 0;
   flex-grow: 0;
