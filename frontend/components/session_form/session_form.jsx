@@ -53,6 +53,7 @@ class SessionForm extends React.Component {
   render() {
     if (this.props.header === 'Sign up') {
       return (
+        <div className='form-container'>
         <div className='user-acct-form'>
         <div className='acct-form'>
         <form className='auth-form' onSubmit={this.handleSubmit}>
@@ -107,10 +108,12 @@ class SessionForm extends React.Component {
         </footer>
       </div>
       </div>
+      </div>
     )
 
     } else {
     return (
+      <div className='form-container'>
       <div className='user-acct-form'>
       <div className='acct-form'>
         <form className='auth-form' onSubmit={this.handleSubmit}>
@@ -150,7 +153,9 @@ class SessionForm extends React.Component {
         </footer>
       </div>
       </div>
+      </div>
     );
+
   }
 }
 }

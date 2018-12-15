@@ -4,7 +4,7 @@ class ProjectShow extends React.Component {
   render() {
     return (
       <div>
-        Project Show
+        <h1>Project Show</h1>
       </div>
     )
   };

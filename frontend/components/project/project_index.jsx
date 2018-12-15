@@ -30,6 +30,7 @@ class ProjectIndex extends React.Component {
       <div>
         <ul>
           {projects}
+          PROJECT INDEX
         </ul>
       </div>
     )

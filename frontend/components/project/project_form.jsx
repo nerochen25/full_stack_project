@@ -1,13 +1,23 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 class ProjectForm extends React.Component {
-  render(){
+  constructor(props){
+    super(props);
+    this.state = this.props.project;
+
+  }
+
+  udpate(field){
+    return e => this.setState({ [field]: e.target.value });
+  }
+   render(){
     return(
       <div>
-        Project Form
+        <Link to='/projects/create'>NEXT STEP</Link>
       </div>
     )
   }
 }
 
-export default ProjectForm;
+export default withRouter(ProjectForm);

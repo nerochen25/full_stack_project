@@ -514,9 +514,6 @@ input text {
   padding: 7px;
 }
 
-.footer {
-  background-color: white;
-}
 
 .username-input {
   border-radius: 0;
@@ -611,5 +608,117 @@ input text {
 }
 .log-out-btn {
   font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
 
+.profile-img {
+  width: 150px;
+  height: auto;
+}
+
+.footer-container {
+  margin-bottom: 3rem;
+  background-color: #FFFFFF;
+  border-width: 0.2rem;
+  border-color: #9B9E9E;
+  border-top: 0.1rem solid #DCDEDD;
+}
+
+.subcategory-bar {
+  display: block;
+
+}
+
+.grid-container {
+  padding-left: 60px;
+  padding-right: 60px;
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.grid-row {
+  margin-left: -12px;
+  margin-right: -12px;
+  box-sizing: inherit;
+}
+
+.grid-row:before {
+    content: " ";
+    display: table;
+}
+
+.grid-row:after {
+    clear: both;
+}
+
+.grid-row:after {
+    content: " ";
+    display: table;
+}
+
+.col-full {
+  padding-left: 12px;
+  padding-right: 12px;
+  vertical-align: top;
+  float: left;
+  padding-bottom: 0rem;
+  width: calc(6/24 * 100%) !important;
+  box-sizing: inherit;
+}
+
+.grid-section {
+  box-sizing: inherit;
+  display: block;
+}
+
+.grid-title {
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  box-sizing: inherit;
+  display: block;
+  text-align: left;
+  font-size: 13px;
+}
+
+h3 {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: -0.6em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: -40px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
+}
+
+.grid-ul {
+  text-align: left;
+}
+
+.link-soft-black {
+  color: #282828;
+  fill: #282828;
+  box-sizing: inherit;
+  cursor: pointer;
+  list-style-type: none;
+  text-align: -webkit-match-parent;
+}
+
+.link-soft-black :hover {
+  text-decoration: underline;
+  color: green;
 }

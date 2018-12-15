@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import SignUpFormContainer from './session_form/signup_form_container';
@@ -8,48 +8,23 @@ import GreetingContainer from './greeting/greeting_container';
 import ProjectIndexContainer from './project/project_index_container';
 import CreateProjectFormContainer from './project/create_project_form_container';
 import EditProjectFormContainer from './project/edit_project_form_container';
+import ProjectForm from './project/project_form';
+import NavBar from './nav_bar/nav_bar';
+import Footer from './footer/footer';
 
 const App = () => (
 
   <div className='main-content'>
-    <div className="relative">
-      <section className="nav-container">
-        <section className="nav-bar-logo">
-          <a className="logo-image-container" href="#/">
-            <img className="logo-image" src={"https://d3mlfyygrfdi2i.cloudfront.net/preview-logo-color.png"}/>
-          </a>
-        </section>
-        <section className="nav-left">
-          <button className="explore-btn">Explore</button>
-          <a href="#" className="start-a-project-link">Start a project</a>
-        </section>
-        <section className="nav-right">
-          <button className="search-btn">
-            Search <br /> <i className="fa fa-search"></i>
-          </button>
-          <a className="sign-in-link" href="#/login">Sign In</a>
-        </section>
-      </section>
-    </div>
-    <header>
-      <Link to='/'>
-        <h1 className='we-are-starters-header'></h1>
-      </Link>
-      <GreetingContainer className='greeting-container'/>
-    </header>
-    <div className='form-container'>
-      <AuthRoute exact path="/login" component={LogInFormContainer} />
-      <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-    </div>
-    <Route exact path="/projects" component={ProjectIndexContainer} />
-    <ProtectedRoute exact path="/newproject/create" component={CreateProjectFormContainer} />
-    <ProtectedRoute exact path="/projects/:id/edit" component={EditProjectFormContainer} />
-    <div className='main-body'>
-      BODYYYY
-    </div>
-    <footer className='footer'>
-      FOOTER
-    </footer>
+    <NavBar />
+    <Switch>
+      <AuthRoute path="/signup" component={SignUpFormContainer} />
+      <AuthRoute path="/login" component={LogInFormContainer} />
+      <ProtectedRoute path="/projects/create" component={CreateProjectFormContainer} />
+      <ProtectedRoute path="/projects/:id/edit" component={EditProjectFormContainer} />
+      <Route path="/projects" component={ProjectIndexContainer} />
+      <Route path='/' component={GreetingContainer}/>
+    </Switch>
+    <Footer />
   </div>
 );
 
