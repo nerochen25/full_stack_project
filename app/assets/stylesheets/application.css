@@ -274,7 +274,7 @@ h2 {
 }
 
 .explore-btn:hover {
-  color: green;
+  color: #009E74;
 }
 
 .start-a-project-link {
@@ -288,7 +288,7 @@ h2 {
 }
 
 .start-a-project-link:hover {
-  color: green;
+  color: #009E74;
 }
 
 .nav-right {
@@ -318,7 +318,7 @@ h2 {
 }
 
 .search-btn:hover {
-  color: green;
+  color: #009E74;
 }
 
 .sign-in-link {
@@ -328,7 +328,7 @@ h2 {
 }
 
 .sign-in-link:hover {
-  color: green;
+  color: #009E74;
 }
 
 .main-content {
@@ -720,5 +720,213 @@ ul {
 
 .link-soft-black :hover {
   text-decoration: underline;
-  color: green;
+  color: #009E74;
+}
+
+.section-project-form-1 {
+  padding-bottom: 6rem;
+  display: block;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  font: inherit;
+}
+
+.grid-content-container1 {
+  padding-left: 18px;
+  padding-right: 18px;
+  vertical-align: top;
+  float: left;
+  position: relative;
+  width: calc(12/24 * 100%) !important;
+  margin-left: calc(4/24 * 100%) !important;
+  box-sizing: inherit;
+}
+
+.grid-content-box1 {
+  padding-top: 6rem !important;
+  padding-bottom: 4rem !important;
+  box-sizing: inherit;
+}
+
+.grid-content-box1-title {
+  font-family: "Cooper Light", Georgia, Times, "Times New Roman", serif;
+  margin-bottom: 2.4rem;
+  font-size: 3.8rem;
+  line-height: 5.4rem;
+  box-sizing: inherit;
+  -webkit-margin-before: -0.8em;
+  -webkit-margin-after: 0.3em;
+  display: block;
+  text-align: left;
+}
+
+.grid-content-box1-btn {
+  box-sizing: inherit;
+  background-color: #009E74;
+  color: #FFFFFF !important;
+  height: 4.8rem;
+  line-height: 4.8rem;
+  padding: 0 2.4rem;
+  font-size: 1.6rem;
+  border: none;
+  position: relative;
+  display: inline-block;
+  -webkit-appearance: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-weight: 350;
+  transition: all 0.25s ease-in-out !important;
+  text-align: center;
+  text-decoration: none;
+  align-items: flex-start;
+}
+
+.grid-content-box1-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  box-shadow: 0 2px 4px rgba(40,40,40,0.17);
+  transition: all 0.25s ease-in-out !important;
+}
+
+.grid-content-container2-1 {
+  padding-left: 12px;
+  padding-right: 12px;
+  vertical-align: top;
+  float: left;
+  position: relative;
+  padding-bottom: 5vh;
+  width: calc(14/24 * 100%) !important;
+  box-sizing: inherit;
+}
+
+.project-image-link {
+  background-image: url('https://a.kickstarter.com/assets/projects/learn/refresh/feature-1-6e68a182e1340ce87d9b3c9f9a25da52935d14be496a4e88085025ae54bb870d.jpg');
+  height: 85vh;
+  position: relative;
+  display: block;
+  background-position: center center;
+  background-size: cover;
+  transition: all 600ms cubic-bezier(0.175, 0.885, 0.335, 1);
+  box-sizing: inherit;
+  text-decoration: none;
+  color: #2752ff;
+  cursor: pointer;
+}
+
+.project-image-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: inherit;
+  box-shadow: 0 3px 6px 1px rgba(0,0,0,0.17);
+  transition: all 0.25s ease-in-out !important;
+  outline: 0;
+}
+
+.grid-content-container2-2 {
+  padding-left: 18px;
+  padding-right: 18px;
+  vertical-align: top;
+  float: left;
+  position: relative;
+  width: calc(10/24 * 100%) !important;
+  box-sizing: inherit;
+}
+
+.container2-project-image {
+  padding-bottom: 5vh;
+  margin-left: -12px;
+  margin-right: -12px;
+  box-sizing: inherit;
+}
+
+.container2-project-image-link {
+  background-image: url('https://a.kickstarter.com/assets/projects/learn/refresh/feature-2-8c80ae939629f8b10087e097c965990ff4b3eae72b90b51fc597c7f794420881.jpg');
+  height: 40vh;
+  position: relative;
+  display: block;
+  background-size: cover;
+  transition: all 600ms cubic-bezier(0.175, 0.885, 0.335, 1);
+  box-sizing: inherit;
+  text-decoration: none;
+  color: #2752ff;
+}
+
+.container2-project-image-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: inherit;
+  box-shadow: 0 3px 6px 1px rgba(0,0,0,0.17);
+  transition: all 0.25s ease-in-out !important;
+  outline: 0;
+}
+
+.container2-project-image-link2 {
+  background-image: url('https://a.kickstarter.com/assets/projects/learn/refresh/feature-3-48fe9583f16524ea8412cbb862901b00af1aaf669fdcf43f466f34af5696fc08.jpg');
+  height: 40vh;
+  position: relative;
+  display: block;
+  background-position: center bottom;
+  background-size: cover;
+  transition: all 600ms cubic-bezier(0.175, 0.885, 0.335, 1);
+  box-sizing: inherit;
+  cursor: pointer;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.container2-project-image-link2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: inherit;
+  box-shadow: 0 3px 6px 1px rgba(0,0,0,0.17);
+  transition: all 0.25s ease-in-out !important;
+  outline: 0;
+}
+
+.grid-image-text {
+  left: 1rem;
+  bottom: 1.8rem;
+  right: 1rem;
+  position: absolute;
+  box-sizing: inherit;
+  display: inline;
+  background: #FFFFFF;
+  box-shadow: 0.6rem 0 0 #FFFFFF, -0.6rem 0 0 #FFFFFF;
+  font-family: "Cooper Light", Georgia, Times, "Times New Roman", serif;
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+  color: #000000;
+  font-size: 0.88rem;
+  line-height: 2.0rem;
+}
+
+.section-project-form-1 {
+  background-color: white;
 }

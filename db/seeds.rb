@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.delete_all
+Project.delete_all
 
 demo1 = User.create!(
   username: 'Demo User',
@@ -31,6 +32,16 @@ project1 = Project.create!(
   creator_id: demo1.id,
   category_id: 1,
   funding_goal: 50000,
-  due_date: Date.new,
+  due_date: Time.new,
+  reward_offered: true
+)
+
+project2 = Project.create!(
+  title: 'Key Radar',
+  description: 'Help bad-memory people find their keys with advanced radar technology',
+  creator_id: demo2.id,
+  category_id: 2,
+  funding_goal: 50000,
+  due_date: Time.new,
   reward_offered: true
 )
