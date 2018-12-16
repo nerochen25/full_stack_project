@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ProjectShow from '../project/project_show';
 import ProjectForm from '../project/project_form';
+import ProjectIndex from '../project/project_index';
 
 
 

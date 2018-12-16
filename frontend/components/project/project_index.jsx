@@ -5,7 +5,7 @@ import ProjectIndexItemContainer from './project_index_item_container';
 class ProjectIndex extends React.Component {
   constructor(props){
     super(props);
-    this.state= {
+    this.state = {
       project: [],
     }
   };
@@ -18,7 +18,7 @@ class ProjectIndex extends React.Component {
   }
 
   render(){
-    let projects = this.props.projects.map((project) => {
+    let projects = (this.props.projects).map((project) => {
       return (
         <ProjectIndexItemContainer
           key={`${project.id}`}
