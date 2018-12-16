@@ -5,16 +5,16 @@ import {
 }
 from '../actions/project_actions';
 
-
 const projectReducer = (state = {}, action) => {
   Object.freeze(state);
   let newState;
   switch (action.type) {
     case RECEIVE_PROJECTS:
-      return state.projects;
+      newState = Object.assign({}, state, action.projects);
+      return newState;
     case RECEIVE_PROJECT:
       newState = Object.assign({}, state, {
-        [action.project.id]: action.project
+        [action.project.id]: action.project,
       });
       return newState;
     case REMOVE_PROJECT:

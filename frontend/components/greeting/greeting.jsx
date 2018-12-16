@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ProjectShow from '../project/project_show';
 import ProjectForm from '../project/project_form';
-import ProjectIndex from '../project/project_index';
+import ProjectIndexContainer from '../project/project_index_container';
 
 
 
 class Greeting extends React.Component {
 
-  render(){
+  render() {
     let currentUser = this.props.currentUser;
     let logout = this.props.logout;
 
@@ -16,8 +16,9 @@ class Greeting extends React.Component {
       return (
         <div>
           <Link className="sign-in-link" to='/login'>Sign in</Link>
+          <ProjectIndexContainer/>
         </div>
-      )
+      );
     };
 
     const loggedIn = () => {
@@ -28,15 +29,16 @@ class Greeting extends React.Component {
             <li><Link to={`/users/${currentUser.id}`}>{currentUser.username}</Link></li>
             <li onClick={logout} className='log-out-btn'>Log out</li>
           </div>
+          <ProjectIndexContainer/>
           <ProjectShow/>
         </div>
-      )
+      );
     };
 
     if (currentUser) {
-      return loggedIn()
+      return loggedIn();
     } else {
-      return notLoggedIn()
+      return notLoggedIn();
     };
   };
 }
