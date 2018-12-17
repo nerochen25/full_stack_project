@@ -5,7 +5,7 @@ import { fetchProject, updateProject, deleteProject } from '../../actions/projec
 // import { fetchCategories } from '../../actions/category_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  let project = state.entities.projects[ownProps.project.id];
+  let project = state.entities.projects[ownProps.match.params.id];
   return {
     project: project || {},
     // categories: Object.values(state.entities.categories),
@@ -19,7 +19,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    formType: 'Update Form',
+    formType: 'Update Project',
     action: project => dispatch(updateProject(project)),
     fetchProject: id => dispatch(fetchProject(id)),
     deleteProject: id => dispatch(deleteProject(id)),
@@ -29,20 +29,18 @@ const mapDispatchToProps = dispatch => {
 
 
 class EditProjectForm extends React.Component {
-  constructor(props){
-    super(props);
-  };
 
-  componentDidMount(){
+  componentDidMount() {
+
     this.props.fetchProject(this.props.match.params.id);
     // this.props.fetchCategories();
   }
 
-  render(){
+  render() {
+
     // const { action, fetchCategories, buttonText, project, categories, deleteProject, currentUserId, addRewardButton, editRewardButton, deleteButton } = this.props;
     const { action, project, deleteProject, currentUserId, addRewardButton, editRewardButton, deleteButton } = this.props;
-
-    return(
+    return (
       <div>
         <ProjectForm
           action={action}
@@ -54,9 +52,8 @@ class EditProjectForm extends React.Component {
           deleteButton={deleteButton}
         />
       </div>
-    )
+    );
   };
 };
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditProjectForm);

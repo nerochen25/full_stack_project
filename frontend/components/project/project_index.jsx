@@ -1,38 +1,40 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ProjectIndexItem from './project_index_item';
 import ProjectIndexItemContainer from './project_index_item_container';
+import CreateProjectFormContainer from './create_project_form_container';
 
 
 class ProjectIndex extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      project: [],
-    };
-  };
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     project: [],
+  //   };
+  // };
 
   componentDidMount() {
-    this.props.fetchProjects();
-    this.props.fetchUsers();
+    this.props.fetchProjects(this.props.projects);
+    this.props.fetchUsers(this.props.users);
   }
 
-  render() {
-    debugger
+  // componentDidUpdate(oldProps) {
+  //   if (oldProps.projects !== this.props.projects) {
+  //     this.setState(this.props.projects);
+  //   }
+  // }
 
-    const projects = this.props.projects.map((project) => {
+  render() {
+    let projects = this.props.projects.map((project) => {
       return (
-        <ProjectIndexItemContainer
-          key={project.id}
-          project={project}
-          creator={this.props.users[project.creator_id]}
-          />
+        <ProjectIndexItemContainer key={`${project.id}`} projects={project} users={this.props.users[project.creator_id]} deleteProject={this.props.deleteProject}/>
       );
     });
+
     return (
       <div>
         <ul>
           {projects}
-          PROJECT INDEX
         </ul>
       </div>
     );

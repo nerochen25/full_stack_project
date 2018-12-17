@@ -21,6 +21,7 @@ const mapStateToProps = state => {
     deleteButton: null,
     errors: state.errors.project,
     currentUserId: state.session.id,
+    formType: "Create Project",
   };
 };
 

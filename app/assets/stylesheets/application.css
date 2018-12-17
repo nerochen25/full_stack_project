@@ -930,3 +930,26 @@ ul {
 .section-project-form-1 {
   background-color: white;
 }
+
+.default-category-select {
+  color: grey;
+}
+
+.project-delete-edit-btn {
+  width: 22%;
+  background-color: #009E74;
+  color: #FFFFFF !important;
+  height: 4.2rem;
+  line-height: 4.2rem;
+  padding: 0 1.8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  transition: all 0.25s ease-in-out !important;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  display: inline-block;
+  -webkit-appearance: none;
+  border-radius: 0;
+}

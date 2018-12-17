@@ -26,6 +26,12 @@ demo3 = User.create!(
   password: 'password'
 )
 
+demo4 = User.create!(
+  username: 'Demo User4',
+  email_address: 'username4@gmail.com',
+  password: 'password'
+)
+
 project1 = Project.create!(
   title: 'Key Radar',
   description: 'Help people with bad-memory find their keys with advanced radar technology',
