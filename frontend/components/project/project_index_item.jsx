@@ -15,6 +15,7 @@ const ProjectIndexItem = ({ project, currentUserId, deleteProject }) => {
 
   return (
       <li>
+        <Link to={`/projects/${project.id}`}>
         <img src={`${project.photo}`}></img>
         <br />
         {project.title}
@@ -24,6 +25,7 @@ const ProjectIndexItem = ({ project, currentUserId, deleteProject }) => {
         {project.funding_goal}
         <br />
         {button}
+        </Link>
       </li>
   );
 };

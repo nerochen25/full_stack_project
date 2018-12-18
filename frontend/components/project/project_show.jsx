@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class ProjectShow extends React.Component {
 
@@ -8,7 +9,16 @@ class ProjectShow extends React.Component {
   }
 
   render() {
-    
+    debugger
+    const button = this.props.project.creator_id === this.props.currentUser.id
+      ? (
+        <div>
+          <button className="project-delete-edit-btn">
+            <Link to={`/projects/${this.props.project.id}/edit`}>Edit Project</Link>
+          </button>
+          <button className="project-delete-edit-btn" onClick={() => this.props.deleteProject(this.props.project.id)}>Delete Project</button>
+        </div>
+      ) : (<div></div>);
     return (
       <div>
         <img src={`${this.props.project.photo}`}></img>
@@ -22,6 +32,8 @@ class ProjectShow extends React.Component {
         Due Date: <span>{this.props.project.due_date}</span>
         <br />
         <p>Created By {this.props.creator.username}</p>
+        <br />
+        {button}
       </div>
     )
   };
