@@ -27,12 +27,18 @@ const removeProject = id => {
 
 export const fetchProjects = () => dispatch => {
   return ApiUtil.fetchProjects()
-    .then((payload) => dispatch(receiveProjects(payload)));
+    .then(
+      (payload) => dispatch(receiveProjects(payload)), (errors) => console.log(
+        errors.responseJSON)
+    );
 };
 
 export const fetchProject = (id) => dispatch => {
   return ApiUtil.fetchProject(id)
-    .then((project) => dispatch(receiveProject(project)));
+    .then(
+      (project) => dispatch(receiveProject(project)), (errors) => console.log(
+        errors.responseJSON)
+    );
 };
 
 export const createProject = (project) => dispatch => {

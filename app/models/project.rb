@@ -5,6 +5,8 @@ class Project < ApplicationRecord
     class_name: 'User',
     foreign_key: :creator_id
 
+  has_one_attached :photo
+
   # belongs_to :category
   #   class_name: 'Category',
   #   foreign_key: :category_id

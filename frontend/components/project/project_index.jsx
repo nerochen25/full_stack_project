@@ -15,8 +15,8 @@ class ProjectIndex extends React.Component {
   };
 
   componentDidMount() {
-    this.props.fetchProjects(this.props.projects);
-    this.props.fetchUsers(this.props.users);
+    this.props.fetchProjects();
+    this.props.fetchUsers();
   }
 
   searchProjects(query) {

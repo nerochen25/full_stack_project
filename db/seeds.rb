@@ -61,3 +61,16 @@ project3 = Project.create!(
   due_date: Time.new,
   reward_offered: true
 )
+
+
+project4 = Project.create!(
+  title: 'Wireless Charger',
+  description: 'Developed with advanced charging technology',
+  creator_id: demo3.id,
+  category_id: 3,
+  funding_goal: 100000,
+  due_date: Time.new,
+  reward_offered: true
+)
+project4Photo = open("https://s3-us-west-1.amazonaws.com/fileupload-wearestarters-dev/Screen+Shot+2018-09-27+at+11.20.57+PM.png")
+project4.photo.attach(io: project4Photo, filename: "screenshot.png")

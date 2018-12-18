@@ -20,10 +20,16 @@ const receiveUser = user => {
 
 export const fetchUsers = () => dispatch => {
   return ApiUtil.fetchUsers()
-    .then((users) => dispatch(receiveUsers(users)));
+    .then(
+      (users) => dispatch(receiveUsers(users)), (errors) => console.log(
+        errors
+        .responseJSON)
+    );
 };
 
 export const fetchUser = (id) => dispatch => {
   return ApiUtil.fetchUser(id)
-    .then((user) => dispatch(receiveUser(user)));
+    .then(
+      (user) => dispatch(receiveUser(user)), (errors) => console.log(errors.responseJSON)
+    );
 };

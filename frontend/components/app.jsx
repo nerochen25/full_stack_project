@@ -26,7 +26,7 @@ const App = () => (
       <ProtectedRoute exact path="/projects/:id/edit" component={EditProjectFormContainer} />
       <Route exact path="/projects" component={ProjectIndexContainer} />
       <Route exact path="/projects/:id" component={ProjectShowContainer} />
-      <Route exact path='/' component={GreetingContainer}/>
+      <Route path='/' component={GreetingContainer}/>
     </Switch>
 
     <Footer />

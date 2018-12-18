@@ -15,6 +15,7 @@ const ProjectIndexItem = ({ project, currentUserId, deleteProject }) => {
 
   return (
       <li>
+        <img src={`${project.photo}`}></img>
         <br />
         {project.title}
         <br />

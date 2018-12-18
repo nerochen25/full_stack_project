@@ -8,9 +8,10 @@ class ProjectShow extends React.Component {
   }
 
   render() {
-
+    
     return (
       <div>
+        <img src={`${this.props.project.photo}`}></img>
         <h1>{this.props.project.title}</h1>
         <br />
         Description:

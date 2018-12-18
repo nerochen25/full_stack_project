@@ -2,6 +2,9 @@ json.projects do
   @projects.each do |project|
     json.set! project.id do
       json.partial! 'api/projects/project', project: project
+      if project.photo.attached?
+        json.photo url_for(project.photo)
+      end
     end
   end
 end
