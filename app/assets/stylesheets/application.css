@@ -953,3 +953,8 @@ ul {
   -webkit-appearance: none;
   border-radius: 0;
 }
+
+.search-box-container {
+  background-color: black;
+  color: white;
+}

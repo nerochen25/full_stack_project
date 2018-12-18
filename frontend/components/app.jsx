@@ -8,6 +8,8 @@ import GreetingContainer from './greeting/greeting_container';
 import ProjectIndexContainer from './project/project_index_container';
 import CreateProjectFormContainer from './project/create_project_form_container';
 import EditProjectFormContainer from './project/edit_project_form_container';
+import ProjectShowContainer from './project/project_show_container';
+
 import ProjectForm from './project/project_form';
 import NavBar from './nav_bar/nav_bar';
 import Footer from './footer/footer';
@@ -23,9 +25,10 @@ const App = () => (
       <ProtectedRoute path="/projects/create" component={CreateProjectFormContainer} />
       <ProtectedRoute exact path="/projects/:id/edit" component={EditProjectFormContainer} />
       <Route exact path="/projects" component={ProjectIndexContainer} />
+      <Route exact path="/projects/:id" component={ProjectShowContainer} />
       <Route exact path='/' component={GreetingContainer}/>
     </Switch>
-    
+
     <Footer />
   </div>
 );

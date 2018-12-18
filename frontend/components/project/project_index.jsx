@@ -9,8 +9,9 @@ class ProjectIndex extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      project: [],
+      projects: [],
     };
+    this.handleSearch = this.handleSearch.bind(this);
   };
 
   componentDidMount() {
@@ -18,13 +19,31 @@ class ProjectIndex extends React.Component {
     this.props.fetchUsers(this.props.users);
   }
 
-  // componentDidUpdate(oldProps) {
-  //   if (oldProps.projects !== this.props.projects) {
-  //     this.setState(this.props.projects);
-  //   }
-  // }
+  searchProjects(query) {
+    query = query.toLowerCase();
+    if (query == '') {
+      this.setState({
+        projects: [],
+      });
+    } else {
+      let searchedProjects = this.props.projects.filter((project) => {
+        return project.title.toLowerCase().includes(query) || project.description.toLowerCase().includes(query)
+      });
+      this.setState({ projects: searchedProjects });
+    }
+  }
+
+  handleSearch(e) {
+    this.searchProjects(e.target.value);
+  }
 
   render() {
+    const searchedProjects = this.state.projects.map((project) => {
+      return (
+        <li key={project.id}><Link to={`/projects/${project.id}`}>{project.title}</Link></li>
+      );
+    });
+
     let projects = this.props.projects.map((project) => {
 
       return (
@@ -39,6 +58,14 @@ class ProjectIndex extends React.Component {
 
     return (
       <div>
+        <div className="search-box-container">
+          <div className='search-input'>
+            <input type='text' placeholder='Search by project title or description...' onKeyUp={this.handleSearch} />
+          </div>
+          <div className='search-result'>
+            <ul>{searchedProjects}</ul>
+          </div>
+      </div>
         <ul>
           {projects}
         </ul>

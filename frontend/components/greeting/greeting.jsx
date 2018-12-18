@@ -30,7 +30,6 @@ class Greeting extends React.Component {
             <li onClick={logout} className='log-out-btn'>Log out</li>
           </div>
           <ProjectIndexContainer/>
-          <ProjectShow/>
         </div>
       );
     };
