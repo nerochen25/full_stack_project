@@ -29,7 +29,6 @@ const mapDispatchToProps = dispatch => {
   return {
     action: project => dispatch(createProject(project)),
     fetchCategories: () => dispatch(fetchCategories()),
-    formType: 'Create Project',
   };
 };
 

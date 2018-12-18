@@ -23,8 +23,8 @@ class ProjectForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.action(this.state);
-    this.props.history.push('/projects');
+    this.props.action(this.state)
+      .then(() => this.props.history.push('/projects'));
   }
 
   render() {

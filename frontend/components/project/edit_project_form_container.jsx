@@ -13,13 +13,13 @@ const mapStateToProps = (state, ownProps) => {
     editRewardButton: 'Edit existing rewards',
     deleteButton: 'Delete this project',
     currentUserId: state.session.id,
+    formType: "Save",
     // errors: state.errors.pledge,
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    formType: 'Update Project',
     action: project => dispatch(updateProject(project)),
     fetchProject: id => dispatch(fetchProject(id)),
     deleteProject: id => dispatch(deleteProject(id)),
@@ -39,7 +39,7 @@ class EditProjectForm extends React.Component {
   render() {
 
     // const { action, fetchCategories, buttonText, project, categories, deleteProject, currentUserId, addRewardButton, editRewardButton, deleteButton } = this.props;
-    const { action, project, deleteProject, currentUserId, addRewardButton, editRewardButton, deleteButton } = this.props;
+    const { action, project, deleteProject, currentUserId, addRewardButton, editRewardButton, deleteButton, formType } = this.props;
     return (
       <div>
         <ProjectForm
@@ -50,6 +50,7 @@ class EditProjectForm extends React.Component {
           addRewardButton={addRewardButton}
           editRewardButton={editRewardButton}
           deleteButton={deleteButton}
+          formType={formType}
         />
       </div>
     );

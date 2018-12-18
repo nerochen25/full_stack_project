@@ -3,8 +3,6 @@ import { Link, withRouter } from 'react-router-dom';
 
 //props has {projects, users: undefined, creators, dispatch}
 const ProjectIndexItem = ({ project, currentUserId, deleteProject }) => {
-  debugger
-
   const button = project.creator_id === currentUserId
     ? (
       <div>
