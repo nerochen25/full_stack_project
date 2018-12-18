@@ -6,12 +6,12 @@ import CreateProjectFormContainer from './create_project_form_container';
 
 
 class ProjectIndex extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     project: [],
-  //   };
-  // };
+  constructor(props) {
+    super(props);
+    this.state = {
+      project: [],
+    };
+  };
 
   componentDidMount() {
     this.props.fetchProjects(this.props.projects);
@@ -26,8 +26,14 @@ class ProjectIndex extends React.Component {
 
   render() {
     let projects = this.props.projects.map((project) => {
+
       return (
-        <ProjectIndexItemContainer key={`${project.id}`} projects={project} users={this.props.users[project.creator_id]} deleteProject={this.props.deleteProject}/>
+        <ProjectIndexItemContainer
+          key={`${project.id}`}
+          project={project}
+          currentUserId={this.props.currentUserId}
+          deleteProject={this.props.deleteProject}
+        />
       );
     });
 

@@ -11,7 +11,6 @@ import EditProjectFormContainer from './project/edit_project_form_container';
 import ProjectForm from './project/project_form';
 import NavBar from './nav_bar/nav_bar';
 import Footer from './footer/footer';
-import ProjectFormStepContainer from './project/project_form_step_container';
 
 const App = () => (
 
@@ -22,11 +21,11 @@ const App = () => (
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <ProtectedRoute path="/projects/create" component={CreateProjectFormContainer} />
-      <ProtectedRoute exact path="/projects/create/new" component={ProjectFormStepContainer} />
       <ProtectedRoute exact path="/projects/:id/edit" component={EditProjectFormContainer} />
       <Route exact path="/projects" component={ProjectIndexContainer} />
       <Route exact path='/' component={GreetingContainer}/>
     </Switch>
+    
     <Footer />
   </div>
 );

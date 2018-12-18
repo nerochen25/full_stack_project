@@ -24,13 +24,7 @@ class ProjectForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.action(this.state);
-    this.setState({
-      title: '',
-      description: '',
-      category_id: '',
-      due_date: '',
-      funding_goal: '',
-    });
+    this.props.history.push('/projects');
   }
 
   render() {

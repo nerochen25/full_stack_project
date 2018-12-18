@@ -30,6 +30,8 @@ const usersReducer = (state = {}, action) => {
       });
     case RECEIVE_USERS:
       return Object.assign({}, state, action.users)
+    case RECEIVE_PROJECTS:
+      return Object.assign({}, state, action.payload.users)
     default:
       return state;
   }

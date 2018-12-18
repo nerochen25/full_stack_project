@@ -39,8 +39,9 @@ class Api::ProjectsController < ApplicationController
 
   def destroy
     # project_proposals comes from user.rb
-    project = current_user.project_proposals.find(params[:id])
-    project.destroy
+    @project = current_user.project_proposals.find(params[:id])
+    @project.destroy
+    render json: @project.id
   end
 
   private

@@ -10,7 +10,7 @@ const projectReducer = (state = {}, action) => {
   let newState;
   switch (action.type) {
     case RECEIVE_PROJECTS:
-      newState = Object.assign({}, state, action.projects);
+      newState = Object.assign({}, state, action.payload.projects);
       return newState;
     case RECEIVE_PROJECT:
 

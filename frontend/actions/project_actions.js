@@ -4,10 +4,10 @@ export const RECEIVE_PROJECTS = 'RECEIVE_PROJECTS';
 export const RECEIVE_PROJECT = 'RECEIVE_PROJECT';
 export const REMOVE_PROJECT = 'REMOVE_PROJECT';
 
-const receiveProjects = projects => {
+const receiveProjects = payload => {
   return {
     type: RECEIVE_PROJECTS,
-    projects,
+    payload,
   };
 };
 
@@ -18,16 +18,16 @@ const receiveProject = project => {
   };
 };
 
-const removeProject = project => {
+const removeProject = id => {
   return {
     type: REMOVE_PROJECT,
-    projectId: project.id,
+    projectId: id,
   };
 };
 
 export const fetchProjects = () => dispatch => {
   return ApiUtil.fetchProjects()
-    .then((projects) => dispatch(receiveProjects(projects)));
+    .then((payload) => dispatch(receiveProjects(payload)));
 };
 
 export const fetchProject = (id) => dispatch => {
@@ -47,5 +47,5 @@ export const updateProject = (project) => dispatch => {
 
 export const deleteProject = (id) => dispatch => {
   return ApiUtil.deleteProject(id)
-    .then((project) => dispatch(removeProject(project)));
+    .then((id) => dispatch(removeProject(id)));
 };
