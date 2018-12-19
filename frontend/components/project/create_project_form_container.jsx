@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import ProjectForm from './project_form';
 import { createProject } from '../../actions/project_actions';
-// import { fetchCategories } from '../../actions/category_actions';
+import { fetchCategories } from '../../actions/category_actions';
 
 
 const mapStateToProps = state => {
@@ -15,7 +15,7 @@ const mapStateToProps = state => {
       funding_goal: '',
       due_date: '',
     },
-    // categories: Object.values(state.entities.categories),
+    categories: Object.values(state.entities.categories),
     addRewardButton: 'Add rewards',
     editRewardButton: null,
     deleteButton: null,

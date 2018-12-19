@@ -10,3 +10,7 @@ json.user do
 end
 
 # json.photoUrls @project.photos.map { |file| url_for(file) }
+
+json.category do
+  json.partial! 'api/categories/category', category: @project.category
+end

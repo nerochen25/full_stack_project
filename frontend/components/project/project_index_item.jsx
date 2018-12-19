@@ -22,10 +22,10 @@ const ProjectIndexItem = ({ project, currentUserId, deleteProject }) => {
         <br />
         {project.description}
         <br />
-        {project.funding_goal}
+        ${project.funding_goal}
         <br />
-        {button}
         </Link>
+        {button}
       </li>
   );
 };

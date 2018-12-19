@@ -17,6 +17,7 @@ class ProjectForm extends React.Component {
       creator_id: this.props.project.creator_id,
       photoFile: this.props.project.photoFile,
       photoUrl: null,
+
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,6 +27,10 @@ class ProjectForm extends React.Component {
     if (oldProps.project.id !== this.props.project.id) {
       this.setState(this.props.project);
     }
+  }
+
+  componentDidMount() {
+    this.props.fetchCategories();
   }
 
   update(field) {
@@ -46,7 +51,6 @@ class ProjectForm extends React.Component {
     if (this.state.photoFile) {
       formData.append('project[photo]', this.state.photoFile);
     }
-    debugger
     this.props.action(formData)
       .then(() => this.props.history.push('/projects'));
   }
@@ -66,23 +70,11 @@ class ProjectForm extends React.Component {
 
   render() {
     console.log(this.state)
-    const categories = {
-      1: 'Art',
-      2: 'Comic',
-      3: 'Crafts',
-      4: 'Dance',
-      5: 'Design',
-      6: 'Fashion',
-      7: 'Film & Video',
-      8: 'Food',
-      9: 'Games',
-      10: 'Journalism',
-      11: 'Music',
-      12: 'Photography',
-      13: 'Publishing',
-      14: 'Technology',
-      15: 'Theater',
-    };
+    const categoryOptions = this.props.categories.map((category) => {
+      return (
+        <option value={category.id}>{category.name}</option>
+      );
+    });
 
     return (
       <div>
@@ -150,21 +142,7 @@ class ProjectForm extends React.Component {
             Category:
             <select className="category-dropdown" onChange={this.update('category_id')} value={this.state.category_id}>
               <option className='default-category-select' value='0'>Select your category</option>
-              <option value="1">Art</option>
-              <option value="2">Comics</option>
-              <option value="3">Crafts</option>
-              <option value="4">Dance</option>
-              <option value="5">Design</option>
-              <option value="6">Fashion</option>
-              <option value="7">Film and Video</option>
-              <option value="8">Food</option>
-              <option value="9">Games</option>
-              <option value="10">Journalism</option>
-              <option value="11">Music</option>
-              <option value="12">Photography</option>
-              <option value="13">Publishing</option>
-              <option value="14">Technology</option>
-              <option value="15">Theater</option>
+               {categoryOptions}
             </select>
             <br />
             <input type="submit" value={this.props.formType}/>

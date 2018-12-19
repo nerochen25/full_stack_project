@@ -1,4 +1,5 @@
 class Project < ApplicationRecord
+  # added creator, and category
   validates :title, :description, :creator_id, :category_id, :funding_goal, :due_date, presence: true
 
   belongs_to :creator,
@@ -7,9 +8,9 @@ class Project < ApplicationRecord
 
   has_one_attached :photo
 
-  # belongs_to :category
-  #   class_name: 'Category',
-  #   foreign_key: :category_id
+  belongs_to :category,
+    class_name: 'Category',
+    foreign_key: :category_id
 
   # has_many: :pledges, dependent: :destroy,
   #   class_name: 'Pledge',

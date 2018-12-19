@@ -20,7 +20,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     project: project,
     creator: creator,
-    currentUser: currentUser,
+    currentUser: currentUser || false,
   };
 };
 

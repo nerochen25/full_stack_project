@@ -16,3 +16,11 @@ json.users do
     end
   end
 end
+
+json.categories do
+  @projects.map(&:category).each do |category|
+    json.set! category.id do
+      json.partial! 'api/categories/category', category: category
+    end
+  end
+end
