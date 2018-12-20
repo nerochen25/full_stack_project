@@ -18,7 +18,7 @@ class ProjectShow extends React.Component {
     if (this.props.currentUser === undefined) {
       button = <div></div>;
     }
-    
+
     if (this.props.currentUser === undefined || this.props.currentUser.id !== this.props.project.creator_id) {
       button = <div></div>;
     } else {
@@ -37,7 +37,7 @@ class ProjectShow extends React.Component {
 
     let pledged_amount = `${this.props.project.funding_goal - 9536.43}`.replace(/\d(?=(\d{3})+\.)/g, '$&,');
     let funding_goal = `${this.props.project.funding_goal - 0.00}`.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-;
+
 
     return (
       <div className='campaign-state-live'>

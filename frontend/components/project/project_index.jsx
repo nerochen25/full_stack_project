@@ -40,7 +40,10 @@ class ProjectIndex extends React.Component {
   render() {
     const searchedProjects = this.state.projects.map((project) => {
       return (
-        <li key={project.id}><Link to={`/projects/${project.id}`}>{project.title}</Link></li>
+        <div>
+        <br />
+        <li className="search-result-list-item" key={project.id}><Link to={`/projects/${project.id}`}>{project.title}</Link></li>
+        </div>
       );
     });
 
@@ -59,8 +62,8 @@ class ProjectIndex extends React.Component {
     return (
       <div>
         <div className="search-box-container">
-          <div className='search-input'>
-            <input type='text' placeholder='Search by project title or description...' onKeyUp={this.handleSearch} />
+          <div>
+            <input className='search-input' type='text' placeholder='Search by project title or description...' onKeyUp={this.handleSearch} />
           </div>
           <div className='search-result'>
             <ul>{searchedProjects}</ul>
