@@ -5,7 +5,6 @@ class Footer extends React.Component {
     return (
       <div>
         <div className='footer-container'>
-          <section className='subcategory-bar'>subcategory</section>
           <div className='grid-container'>
             <div className='grid-row'>
               <div className='col-full'>
