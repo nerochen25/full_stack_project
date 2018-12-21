@@ -2393,7 +2393,7 @@ a {
 }
 
 .index-item-funding {
-  border-bottom: 0.05rem solid #DCDEDD;
+  border-bottom: 0.5rem solid #037362;
   border-top: 0.05rem solid #DCDEDD;
 
 }
@@ -2467,14 +2467,15 @@ box-sizing: inherit;
 }
 
 .categories-ul {
-      white-space: nowrap;
-      -webkit-box-pack: center;
-justify-content: center;
-display: flex;
-list-style-type: none;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  /* font-weight: 400; */
 }
 
 .category-list {

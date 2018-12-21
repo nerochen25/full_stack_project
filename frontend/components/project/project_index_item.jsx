@@ -16,7 +16,7 @@ const ProjectIndexItem = ({ project, currentUserId, deleteProject }) => {
       </div>
     ) : (<div></div>);
 
-  let pledged_amount = `${project.funding_goal - 9536.43}`.replace(/\d(?=(\d{3})+\.)/g, '$&,');
+  let pledged_amount = `${(project.funding_goal/1.49).toFixed(2)}`.replace(/\d(?=(\d{3})+\.)/g, '$&,');
   let funding_goal = `${project.funding_goal - 0.00}`.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 
 

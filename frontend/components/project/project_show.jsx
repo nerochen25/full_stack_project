@@ -35,10 +35,10 @@ class ProjectShow extends React.Component {
     let categories = this.props.categories[this.props.project.category_id] || [];
     let category = Object.values(categories)[1];
 
-    let pledged_amount = `${this.props.project.funding_goal - 9536.43}`.replace(/\d(?=(\d{3})+\.)/g, '$&,');
+    let pledged_amount = `${(this.props.project.funding_goal/1.49).toFixed(2)}`.replace(/\d(?=(\d{3})+\.)/g, '$&,');
     let funding_goal = `${this.props.project.funding_goal - 0.00}`.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 
-
+    debugger
     return (
       <div className='campaign-state-live'>
         <div className='content-wrap'>
