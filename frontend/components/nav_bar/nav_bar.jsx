@@ -29,7 +29,9 @@ class NavBar extends React.Component {
               </a>
             </section>
             <section className="nav-left">
-              <button className="explore-btn" href='#/projects'>Explore</button>
+              <Link to='/projects'className="explore-btn">
+                Explore
+              </Link>
               <Link className="start-a-project-link" to="/projects/create">Start a project</Link>
             </section>
             <section className="nav-right">

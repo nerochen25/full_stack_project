@@ -266,6 +266,7 @@ h2 {
 
 .explore-btn {
   margin-right: 1.2rem;
+  padding-top: -0.75rem;
   -webkit-box-align: center;
   align-items: center;
   display: flex;
@@ -2321,6 +2322,8 @@ textarea {
   -webkit-box-orient: horizontal;
   flex-direction: row;
   display: flex;
+  /* max-width: 100px;
+  max-height: 100px; */
 }
 
 .index-item-container {
@@ -2358,6 +2361,7 @@ a {
   text-align: left;
   font-family: 'Quicksand', sans-serif;
   font-size: 1.4rem;
+  width: 100%;
 }
 
 .index-item-title {
