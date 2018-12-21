@@ -62,16 +62,29 @@ class ProjectIndex extends React.Component {
     return (
       <div>
         <div className="search-box-container">
-          <div>
+          <div id='search-bar'>
             <input className='search-input' type='text' placeholder='Search by project title or description...' onKeyUp={this.handleSearch} />
           </div>
           <div className='search-result'>
             <ul>{searchedProjects}</ul>
           </div>
-      </div>
-        <ul>
-          {projects}
-        </ul>
+        </div>
+        <div className="index-item-container">
+          <div className="grid-index-item-container">
+            <div className="grid-index-item-box">
+              <div className="index-upper-bar">
+                <a>FRESH FAVORITES   </a><a className="index-view-more">View more</a>
+
+              </div>
+              <br />
+              <div className="grid-index-items">
+
+                  {projects}
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

@@ -5,7 +5,7 @@ import { Link, withRouter } from 'react-router-dom';
 const ProjectIndexItem = ({ project, currentUserId, deleteProject }) => {
   const button = project.creator_id === currentUserId
     ? (
-      <div>
+      <div className="delete-edit-btns">
         <br />
         <button className="project-delete-edit-btn">
           <Link to={`/projects/${project.id}/edit`}>Edit Project</Link>
@@ -21,23 +21,36 @@ const ProjectIndexItem = ({ project, currentUserId, deleteProject }) => {
 
 
   return (
-      <li>
-        <br />
-        <Link to={`/projects/${project.id}`}>
+      <div className="index-item-container">
+        <div className="index-item">
+          <div className="index-item-image">
+            <Link to={`/projects/${project.id}`}><img src={`${project.photo}`}></img></Link>
+          </div>
+          <div className="index-item-title">
+            <Link to={`/projects/${project.id}`}>{project.title}</Link>
+          </div>
+          <div className="index-item-description">
+            <Link to={`/projects/${project.id}`}>{project.description}</Link>
+          </div>
           <br />
-        <img src={`${project.photo}`}></img>
-        <br />
-        {project.title}
-        <br />
-        {project.description}
-        <br />
-        Pledged amount: ${pledged_amount}
-        <br />
-        Funding goal: ${funding_goal}
-        <br />
-        </Link>
-        {button}
-      </li>
+          <div className="index-item-funding-and-btn">
+            <div className="index-item-funding">
+              <Link to={`/projects/${project.id}`}>
+                <br />
+                <div className="pledged-amount">${pledged_amount}💰</div>
+
+                <div className="funding-goal">pledged of ${funding_goal} goal</div>
+                <br />
+              </Link>
+            </div>
+
+              {button}
+
+          </div>
+
+        </div>
+        <div className="index-item-creator"></div>
+      </div>
   );
 };
 

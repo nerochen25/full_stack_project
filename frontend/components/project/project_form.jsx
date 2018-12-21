@@ -72,7 +72,7 @@ class ProjectForm extends React.Component {
     console.log(this.state)
     const categoryOptions = this.props.categories.map((category) => {
       return (
-        <option value={category.id}>{category.name}</option>
+        <option key={category.id} value={category.id}>{category.name}</option>
       );
     });
 
@@ -87,7 +87,8 @@ class ProjectForm extends React.Component {
                     Bring your creative project to life.
                   </h1>
                   <HashLink className="grid-content-box1-btn" to="#create-project">Start a project</HashLink>
-                </div>
+
+              </div>
               </div>
             </div>
             <div className="grid-row">
@@ -151,7 +152,7 @@ class ProjectForm extends React.Component {
           <br />
           <br />
           <HashLink className="grid-content-box1-btn" to="#project-idea">Next: Project idea</HashLink>
-
+            <p className="form-policy">To create a project, you're required to provide your location, age, national ID, banking and tax information, email, and mailing address. This information is necessary to prevent fraud, comply with the law, and — if your project is successful — to deliver funds. Please note: after launch, your ability to edit, hide, or delete a project is limited.</p>
         </div>
         <div className='grid-form-container2' id="project-idea">
           <div>
@@ -185,7 +186,7 @@ class ProjectForm extends React.Component {
           <br />
 
           <HashLink className="grid-content-box1-btn" to="#project-funding-goal">Next: Funding goal</HashLink>
-
+            <p className="form-policy">To create a project, you're required to provide your location, age, national ID, banking and tax information, email, and mailing address. This information is necessary to prevent fraud, comply with the law, and — if your project is successful — to deliver funds. Please note: after launch, your ability to edit, hide, or delete a project is limited.</p>
         </div>
         <div className='grid-form-container3' id="project-funding-goal">
           <div>
@@ -217,7 +218,7 @@ class ProjectForm extends React.Component {
             <br />
             <br />
           <HashLink className="grid-content-box1-btn" to="#project-image">Next: Project image</HashLink>
-
+          <p className="form-policy">To create a project, you're required to provide your location, age, national ID, banking and tax information, email, and mailing address. This information is necessary to prevent fraud, comply with the law, and — if your project is successful — to deliver funds. Please note: after launch, your ability to edit, hide, or delete a project is limited.</p>
         </div>
         <div className='grid-form-container4' id="project-image">
           <div>
@@ -245,7 +246,9 @@ class ProjectForm extends React.Component {
             <br />
             <br />
           <input type="submit" value={this.props.formType} className="grid-content-box1-btn"/>
-        </div>
+          <p className="form-policy">To create a project, you're required to provide your location, age, national ID, banking and tax information, email, and mailing address. This information is necessary to prevent fraud, comply with the law, and — if your project is successful — to deliver funds. Please note: after launch, your ability to edit, hide, or delete a project is limited.</p>
+
+      </div>
 
           </form>
         </div>

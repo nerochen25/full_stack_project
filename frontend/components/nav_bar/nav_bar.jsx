@@ -1,8 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+
 
 class NavBar extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render(){
+    let logIn;
+    if (this.props.currentUserId) {
+      logIn =
+      <div>
+      <li onClick={this.props.logout} className='sign-in-link'>Log out</li>
+      </div>
+    } else {
+      logIn = <a className="sign-in-link" href="#/login">Sign In</a>
+    };
+
     return (
       <div className='main-content'>
         <div className="relative">
@@ -17,10 +33,12 @@ class NavBar extends React.Component {
               <Link className="start-a-project-link" to="/projects/create">Start a project</Link>
             </section>
             <section className="nav-right">
-              <button className="search-btn">
-                Search <br /> <i className="fa fa-search"></i>
-              </button>
-              <a className="sign-in-link" href="#/login">Sign In</a>
+              <HashLink to='#search-bar'>
+                <button className="search-btn">
+                  Search <br /> <i className="fa fa-search"></i>
+                </button>
+              </HashLink>
+              {logIn}
             </section>
           </section>
         </div>

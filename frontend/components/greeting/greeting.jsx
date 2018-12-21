@@ -14,8 +14,7 @@ class Greeting extends React.Component {
 
     const notLoggedIn = () => {
       return (
-        <div>
-          <Link className="sign-in-link" to='/login'>Sign in</Link>
+        <div className="notLoggedIn-div">
           <ProjectIndexContainer/>
         </div>
       );
@@ -23,12 +22,8 @@ class Greeting extends React.Component {
 
     const loggedIn = () => {
       return (
-        <div>
-          <img className='profile-img' src={'https://media.giphy.com/media/WvXuLOqJeJ0I0/giphy.gif'} />
-          <div className='dropdown-content'>
-            <li><Link to={`/users/${currentUser.id}`}>{currentUser.username}</Link></li>
-            <li onClick={logout} className='log-out-btn'>Log out</li>
-          </div>
+        <div className='logged-in-div'>
+
           <ProjectIndexContainer/>
         </div>
       );
@@ -43,19 +38,3 @@ class Greeting extends React.Component {
 }
 
 export default Greeting;
-
-// const Greeting = ({ currentUser, logout }) => {
-//   const sessionLinks = () => (
-//     <nav className="login-signup">
-//
-//     </nav>
-//   );
-//   const personalGreeting = () => (
-//     <hgroup>
-//       <h2>Hi, {currentUser.username}!</h2>
-//       <button className='log-out-btn' onClick={logout}>Log out</button>
-//     </hgroup>
-//   );
-//
-//   return currentUser ? personalGreeting() : sessionLinks();
-// };

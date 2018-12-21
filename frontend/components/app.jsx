@@ -12,16 +12,22 @@ import ProjectShowContainer from './project/project_show_container';
 
 import ProjectForm from './project/project_form';
 import NavBar from './nav_bar/nav_bar';
+import NavBarContainer from './nav_bar/nav_bar_container';
+
 import Footer from './footer/footer';
+import CategoryBarContainer from './category/category_bar_container';
+import CategoryShowContainer from './category/category_show_container';
 
 const App = () => (
 
   <div className='main-content'>
-    <NavBar />
+    <NavBarContainer />
+    <CategoryBarContainer />
 
     <Switch>
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
       <AuthRoute exact path="/login" component={LogInFormContainer} />
+
       <ProtectedRoute path="/projects/create" component={CreateProjectFormContainer} />
       <ProtectedRoute exact path="/projects/:id/edit" component={EditProjectFormContainer} />
       <Route exact path="/projects" component={ProjectIndexContainer} />
