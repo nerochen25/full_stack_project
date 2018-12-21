@@ -12,7 +12,7 @@ class Api::ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new(project_params)
+    @project = Project.new(create_project_params)
     @project.creator_id = current_user.id
 
     if @project.save
@@ -30,7 +30,7 @@ class Api::ProjectsController < ApplicationController
     # project_proposals comes from user.rb
     @project = current_user.project_proposals.find(params[:id])
 
-    if @project.update(project_params)
+    if @project.update(edit_project_params)
       render :show
     else
       render json: @project.errors.full_messages, status: 422
@@ -45,7 +45,11 @@ class Api::ProjectsController < ApplicationController
   end
 
   private
-  def project_params
+  def create_project_params
     params.require(:project).permit(:title, :description, :creator_id, :category_id, :funding_goal, :due_date, :photo)
+  end
+
+  def edit_project_params
+    params.require(:project).permit(:title, :description, :creator_id, :category_id, :funding_goal, :due_date)
   end
 end

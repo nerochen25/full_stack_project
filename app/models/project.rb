@@ -1,6 +1,7 @@
 class Project < ApplicationRecord
   # added creator, and category
   validates :title, :description, :creator_id, :category_id, :funding_goal, :due_date, presence: true
+  validate :ensure_photo
 
   belongs_to :creator,
     class_name: 'User',
@@ -11,6 +12,13 @@ class Project < ApplicationRecord
   belongs_to :category,
     class_name: 'Category',
     foreign_key: :category_id
+
+
+  def ensure_photo
+    unless self.photo.attached?
+      errors[:photo] << "Must be attached"
+    end
+  end
 
   # has_many: :pledges, dependent: :destroy,
   #   class_name: 'Pledge',

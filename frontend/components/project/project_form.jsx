@@ -16,8 +16,7 @@ class ProjectForm extends React.Component {
       due_date: this.props.project.due_date,
       creator_id: this.props.project.creator_id,
       photoFile: this.props.project.photoFile,
-      photoUrl: null,
-
+      photoUrl: this.props.project.photo,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -48,9 +47,12 @@ class ProjectForm extends React.Component {
     formData.append('project[creator_id]', this.state.creator_id);
     formData.append('project[category_id]', this.state.category_id);
     formData.append('project[due_date]', this.state.due_date);
+    formData.append('project[photoUrl]', this.state.photoUrl);
+
     if (this.state.photoFile) {
       formData.append('project[photo]', this.state.photoFile);
-    }
+    };
+
     this.props.action(formData)
       .then(() => this.props.history.push('/projects'));
   }
@@ -64,17 +66,23 @@ class ProjectForm extends React.Component {
 
     if (file) {
       fileReader.readAsDataURL(file);
+    } else {
+      this.setState({ photoFile: null, photoUrl: "" });
     }
-
-  }
+  };
 
   render() {
-    console.log(this.state)
+    const photoPreview = this.state.photoUrl ? (
+      <img className="photo-preview" src={this.state.photoUrl} />
+    ) : null;
+
     const categoryOptions = this.props.categories.map((category) => {
       return (
         <option key={category.id} value={category.id}>{category.name}</option>
       );
     });
+    console.log(this.state.photoFile);
+    console.log(this.state.photoUrl);
 
     return (
       <div className="entire-new-form-page">
@@ -241,7 +249,10 @@ class ProjectForm extends React.Component {
           <br />
           Upload Image File:
           <br />
-          <input type='file' onChange={this.handleFile.bind(this)} />
+          <input type='file' onChange={this.handleFile.bind(this)}/>
+          <br />
+        <h3 className='image-preview'>Image Preview</h3>
+        {photoPreview}
             <br />
             <br />
             <br />
