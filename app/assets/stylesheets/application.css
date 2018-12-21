@@ -974,6 +974,30 @@ ul {
   border-radius: 0;
 }
 
+
+.project-delete-edit-btn-show {
+  width: 27.2%;
+  background-color: #009E74;
+  color: #FFFFFF !important;
+  height: 4.2rem;
+  line-height: 4.2rem;
+  padding: 0 1.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.25s ease-in-out !important;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  display: inline-block;
+  -webkit-appearance: none;
+  border-radius: 0;
+  border-top: 0.05rem solid #DCDEDD;
+  border-bottom: 0.05rem solid #DCDEDD;
+  border-left: 0.05rem solid #DCDEDD;
+  border-right: 0.05rem solid #DCDEDD;
+}
+
 .search-box-container {
   background-color: black;
   color: white;

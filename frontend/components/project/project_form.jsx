@@ -133,134 +133,132 @@ class ProjectForm extends React.Component {
         </section>
         <div className="create-project" id='create-project'>
           <form onSubmit={this.handleSubmit}>
-        <div className='grid-form-container1'>
-          <div>
-            <div className='grid-form-upper-nav'>
-              <div className="form-upper-nav-logo">
-                <Link to='/' className="form-upper-nav-logo-link">
-                  <img className="logo-image" src={"https://famfonts.com/wp-content/uploads/kickstarter-wide.png"}/>
-                </Link>
+            <div className='grid-form-container1'>
+              <div>
+                <div className='grid-form-upper-nav'>
+                  <div className="form-upper-nav-logo">
+                    <Link to='/' className="form-upper-nav-logo-link">
+                      <img className="logo-image" src={"https://famfonts.com/wp-content/uploads/kickstarter-wide.png"}/>
+                    </Link>
+                  </div>
+                  <hr className='form-separater'/>
+                  <div className="form-upper-nav-page-num">
+                    <div className="form-page-num">1 of 4</div>
+                  </div>
+                </div>
               </div>
-              <hr className='form-separater'/>
-              <div className="form-upper-nav-page-num">
-                <div className="form-page-num">1 of 4</div>
+              <div className="category-selector-box">
+                <h2 className="category-selector-h2">First, let's get you set up.</h2>
+                <h3 className="category-selector-h3">Pick a project category to connect with a specific community. You can always update this later.</h3>
               </div>
+              <br />
+              <select className="category-dropdown" onChange={this.update('category_id')} value={this.state.category_id}>
+                <option className='default-category-select' value='0'>Select your category</option>
+                 {categoryOptions}
+              </select>
+              <br />
+              <br />
+              <br />
+              <HashLink className="grid-content-box1-btn" to="#project-idea">Next: Project idea</HashLink>
+                <p className="form-policy">To create a project, you're required to provide your location, age, national ID, banking and tax information, email, and mailing address. This information is necessary to prevent fraud, comply with the law, and — if your project is successful — to deliver funds. Please note: after launch, your ability to edit, hide, or delete a project is limited.</p>
             </div>
-          </div>
-          <div className="category-selector-box">
-            <h2 className="category-selector-h2">First, let's get you set up.</h2>
-            <h3 className="category-selector-h3">Pick a project category to connect with a specific community. You can always update this later.</h3>
-          </div>
-          <br />
-          <select className="category-dropdown" onChange={this.update('category_id')} value={this.state.category_id}>
-            <option className='default-category-select' value='0'>Select your category</option>
-             {categoryOptions}
-          </select>
-          <br />
-          <br />
-          <br />
-          <HashLink className="grid-content-box1-btn" to="#project-idea">Next: Project idea</HashLink>
-            <p className="form-policy">To create a project, you're required to provide your location, age, national ID, banking and tax information, email, and mailing address. This information is necessary to prevent fraud, comply with the law, and — if your project is successful — to deliver funds. Please note: after launch, your ability to edit, hide, or delete a project is limited.</p>
-        </div>
-        <div className='grid-form-container2' id="project-idea">
-          <div>
-            <div className='grid-form-upper-nav'>
-              <div className="form-upper-nav-logo">
-                <Link to='/' className="form-upper-nav-logo-link">
-                  <img className="logo-image" src={"https://famfonts.com/wp-content/uploads/kickstarter-wide.png"}/>
-                </Link>
+            <div className='grid-form-container2' id="project-idea">
+              <div>
+                <div className='grid-form-upper-nav'>
+                  <div className="form-upper-nav-logo">
+                    <Link to='/' className="form-upper-nav-logo-link">
+                      <img className="logo-image" src={"https://famfonts.com/wp-content/uploads/kickstarter-wide.png"}/>
+                    </Link>
+                  </div>
+                  <hr className='form-separater'/>
+                  <div className="form-upper-nav-page-num">
+                    <div className="form-page-num">2 of 4</div>
+                  </div>
+                </div>
               </div>
-              <hr className='form-separater'/>
-              <div className="form-upper-nav-page-num">
-                <div className="form-page-num">2 of 4</div>
+              <div className="category-selector-box">
+                <h2 className="category-selector-h2">Give a title of your project and describe what you'll be creating.</h2>
+                <h3 className="category-selector-h3">And don’t worry, you can edit this later, too.</h3>
               </div>
+              Title:
+              <br />
+              <input type="text" value={this.state.title} onChange={this.update('title')} />
+              <br />
+              <br />
+
+              Description
+              <br/>
+              <textarea type="text" value={this.state.description} onChange={this.update('description')}></textarea>
+              <br />
+              <br />
+              <br />
+
+              <HashLink className="grid-content-box1-btn" to="#project-funding-goal">Next: Funding goal</HashLink>
+                <p className="form-policy">To create a project, you're required to provide your location, age, national ID, banking and tax information, email, and mailing address. This information is necessary to prevent fraud, comply with the law, and — if your project is successful — to deliver funds. Please note: after launch, your ability to edit, hide, or delete a project is limited.</p>
             </div>
-          </div>
-          <div className="category-selector-box">
-            <h2 className="category-selector-h2">Give a title of your project and describe what you'll be creating.</h2>
-            <h3 className="category-selector-h3">And don’t worry, you can edit this later, too.</h3>
-          </div>
-          Title:
-          <br />
-          <input type="text" value={this.state.title} onChange={this.update('title')} />
-          <br />
-          <br />
-
-          Description
-          <br/>
-          <textarea type="text" value={this.state.description} onChange={this.update('description')}></textarea>
-          <br />
-          <br />
-          <br />
-
-          <HashLink className="grid-content-box1-btn" to="#project-funding-goal">Next: Funding goal</HashLink>
-            <p className="form-policy">To create a project, you're required to provide your location, age, national ID, banking and tax information, email, and mailing address. This information is necessary to prevent fraud, comply with the law, and — if your project is successful — to deliver funds. Please note: after launch, your ability to edit, hide, or delete a project is limited.</p>
-        </div>
-        <div className='grid-form-container3' id="project-funding-goal">
-          <div>
-            <div className='grid-form-upper-nav'>
-              <div className="form-upper-nav-logo">
-                <Link to='/' className="form-upper-nav-logo-link">
-                  <img className="logo-image" src={"https://famfonts.com/wp-content/uploads/kickstarter-wide.png"}/>
-                </Link>
+            <div className='grid-form-container3' id="project-funding-goal">
+              <div>
+                <div className='grid-form-upper-nav'>
+                  <div className="form-upper-nav-logo">
+                    <Link to='/' className="form-upper-nav-logo-link">
+                      <img className="logo-image" src={"https://famfonts.com/wp-content/uploads/kickstarter-wide.png"}/>
+                    </Link>
+                  </div>
+                  <hr className='form-separater'/>
+                  <div className="form-upper-nav-page-num">
+                    <div className="form-page-num">3 of 4</div>
+                  </div>
+                </div>
               </div>
-              <hr className='form-separater'/>
-              <div className="form-upper-nav-page-num">
-                <div className="form-page-num">3 of 4</div>
+              <div className="category-selector-box">
+                <h2 className="category-selector-h2">Set a funding goal to achieve your dream idea.</h2>
+                <h3 className="category-selector-h3">Tell us the estimated value of your project.</h3>
               </div>
+              Project End Date:
+              <br />
+              <input type='date' value={this.state.due_date} onChange={this.update('due_date')} />
+              <br />
+              <br />
+              Funding Goal:
+              <br />
+              <input type='float' value={this.state.funding_goal} onChange={this.update('funding_goal')} />
+                <br />
+                <br />
+                <br />
+              <HashLink className="grid-content-box1-btn" to="#project-image">Next: Project image</HashLink>
+              <p className="form-policy">To create a project, you're required to provide your location, age, national ID, banking and tax information, email, and mailing address. This information is necessary to prevent fraud, comply with the law, and — if your project is successful — to deliver funds. Please note: after launch, your ability to edit, hide, or delete a project is limited.</p>
             </div>
-          </div>
-          <div className="category-selector-box">
-            <h2 className="category-selector-h2">Set a funding goal to achieve your dream idea.</h2>
-            <h3 className="category-selector-h3">Tell us the estimated value of your project.</h3>
-          </div>
-          Project End Date:
-          <br />
-          <input type='date' value={this.state.due_date} onChange={this.update('due_date')} />
-          <br />
-          <br />
-          Funding Goal:
-          <br />
-          <input type='float' value={this.state.funding_goal} onChange={this.update('funding_goal')} />
-            <br />
-            <br />
-            <br />
-          <HashLink className="grid-content-box1-btn" to="#project-image">Next: Project image</HashLink>
-          <p className="form-policy">To create a project, you're required to provide your location, age, national ID, banking and tax information, email, and mailing address. This information is necessary to prevent fraud, comply with the law, and — if your project is successful — to deliver funds. Please note: after launch, your ability to edit, hide, or delete a project is limited.</p>
-        </div>
-        <div className='grid-form-container4' id="project-image">
-          <div>
-            <div className='grid-form-upper-nav'>
-              <div className="form-upper-nav-logo">
-                <Link to='/' className="form-upper-nav-logo-link">
-                  <img className="logo-image" src={"https://famfonts.com/wp-content/uploads/kickstarter-wide.png"}/>
-                </Link>
+            <div className='grid-form-container4' id="project-image">
+              <div>
+                <div className='grid-form-upper-nav'>
+                  <div className="form-upper-nav-logo">
+                    <Link to='/' className="form-upper-nav-logo-link">
+                      <img className="logo-image" src={"https://famfonts.com/wp-content/uploads/kickstarter-wide.png"}/>
+                    </Link>
+                  </div>
+                  <hr className='form-separater'/>
+                  <div className="form-upper-nav-page-num">
+                    <div className="form-page-num">4 of 4</div>
+                  </div>
+                </div>
               </div>
-              <hr className='form-separater'/>
-              <div className="form-upper-nav-page-num">
-                <div className="form-page-num">4 of 4</div>
+              <div className="category-selector-box">
+                <h2 className="category-selector-h2">Finally, provide a high-quality image.</h2>
+                <h3 className="category-selector-h3">Better image, better chance.</h3>
               </div>
+              <br />
+              Upload Image File:
+              <br />
+              <input type='file' onChange={this.handleFile.bind(this)}/>
+              <br />
+              <h3 className='image-preview'>Image Preview</h3>
+              {photoPreview}
+              <br />
+              <br />
+              <br />
+              <input type="submit" value={this.props.formType} className="grid-content-box1-btn"/>
+              <p className="form-policy">To create a project, you're required to provide your location, age, national ID, banking and tax information, email, and mailing address. This information is necessary to prevent fraud, comply with the law, and — if your project is successful — to deliver funds. Please note: after launch, your ability to edit, hide, or delete a project is limited.</p>
             </div>
-          </div>
-          <div className="category-selector-box">
-            <h2 className="category-selector-h2">Finally, provide a high-quality image.</h2>
-            <h3 className="category-selector-h3">Better image, better chance.</h3>
-          </div>
-          <br />
-          Upload Image File:
-          <br />
-          <input type='file' onChange={this.handleFile.bind(this)}/>
-          <br />
-        <h3 className='image-preview'>Image Preview</h3>
-        {photoPreview}
-            <br />
-            <br />
-            <br />
-          <input type="submit" value={this.props.formType} className="grid-content-box1-btn"/>
-          <p className="form-policy">To create a project, you're required to provide your location, age, national ID, banking and tax information, email, and mailing address. This information is necessary to prevent fraud, comply with the law, and — if your project is successful — to deliver funds. Please note: after launch, your ability to edit, hide, or delete a project is limited.</p>
-
-      </div>
-
           </form>
         </div>
       </div>

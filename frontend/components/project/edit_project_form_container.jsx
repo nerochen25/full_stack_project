@@ -14,6 +14,7 @@ const mapStateToProps = (state, ownProps) => {
     deleteButton: 'Delete this project',
     currentUserId: state.session.id,
     formType: "Save",
+    errors: state.errors.project,
     // errors: state.errors.pledge,
   };
 };

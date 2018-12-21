@@ -23,6 +23,7 @@ const mapStateToProps = (state, ownProps) => {
     project: project,
     creator: creator,
     currentUser: currentUser,
+    currentUserId: state.session.id,
     catergoryId: project.category_id,
     categories: categories,
   };
