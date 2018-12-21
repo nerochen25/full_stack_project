@@ -60,6 +60,7 @@ class SessionForm extends React.Component {
 
     if (this.props.header === 'Sign up') {
       return (
+        <div>
         <div className='form-container'>
           <div className='user-acct-form'>
             <div className='acct-form'>
@@ -114,6 +115,8 @@ class SessionForm extends React.Component {
               </footer>
           </div>
         </div>
+      </div>
+      <Footer />
       </div>
     );
 
