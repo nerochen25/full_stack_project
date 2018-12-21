@@ -2469,7 +2469,7 @@ box-sizing: inherit;
 .categories-ul {
   white-space: nowrap;
   -webkit-box-pack: center;
-  justify-content: center;
+  /* justify-content: center; */
   display: flex;
   list-style-type: none;
   padding: 0;
