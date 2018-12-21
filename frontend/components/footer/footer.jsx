@@ -72,7 +72,7 @@ class Footer extends React.Component {
               </div>
               <div className='col-full'>
                 <section className='grid-section'>
-                  <h3 className='grid-title'>MORE FROM KICKSTARTER</h3>
+                  <h3 className='grid-title'>MORE FROM WeAreStarters</h3>
                   <ul className='grid-ul'>
                     <li className='link-soft-black'>
                       <a>WeAreStarters Live</a>

@@ -138,7 +138,7 @@ class ProjectForm extends React.Component {
                 <div className='grid-form-upper-nav'>
                   <div className="form-upper-nav-logo">
                     <Link to='/' className="form-upper-nav-logo-link">
-                      <img className="logo-image" src={"https://famfonts.com/wp-content/uploads/kickstarter-wide.png"}/>
+                      <img className="logo-image-form" src={"https://s3-us-west-1.amazonaws.com/fileupload-wearestarters-dev/Screen+Shot+2018-12-21+at+2.23.39+PM.png"}/>
                     </Link>
                   </div>
                   <hr className='form-separater'/>
@@ -167,7 +167,7 @@ class ProjectForm extends React.Component {
                 <div className='grid-form-upper-nav'>
                   <div className="form-upper-nav-logo">
                     <Link to='/' className="form-upper-nav-logo-link">
-                      <img className="logo-image" src={"https://famfonts.com/wp-content/uploads/kickstarter-wide.png"}/>
+                      <img className="logo-image-form" src={"https://s3-us-west-1.amazonaws.com/fileupload-wearestarters-dev/Screen+Shot+2018-12-21+at+2.23.39+PM.png"}/>
                     </Link>
                   </div>
                   <hr className='form-separater'/>
@@ -201,7 +201,7 @@ class ProjectForm extends React.Component {
                 <div className='grid-form-upper-nav'>
                   <div className="form-upper-nav-logo">
                     <Link to='/' className="form-upper-nav-logo-link">
-                      <img className="logo-image" src={"https://famfonts.com/wp-content/uploads/kickstarter-wide.png"}/>
+                      <img className="logo-image-form" src={"https://s3-us-west-1.amazonaws.com/fileupload-wearestarters-dev/Screen+Shot+2018-12-21+at+2.23.39+PM.png"}/>
                     </Link>
                   </div>
                   <hr className='form-separater'/>
@@ -233,7 +233,7 @@ class ProjectForm extends React.Component {
                 <div className='grid-form-upper-nav'>
                   <div className="form-upper-nav-logo">
                     <Link to='/' className="form-upper-nav-logo-link">
-                      <img className="logo-image" src={"https://famfonts.com/wp-content/uploads/kickstarter-wide.png"}/>
+                      <img className="logo-image-form" src={"https://s3-us-west-1.amazonaws.com/fileupload-wearestarters-dev/Screen+Shot+2018-12-21+at+2.23.39+PM.png"}/>
                     </Link>
                   </div>
                   <hr className='form-separater'/>

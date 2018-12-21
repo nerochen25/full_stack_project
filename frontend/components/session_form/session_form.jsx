@@ -101,7 +101,7 @@ class SessionForm extends React.Component {
                     </li>
                     <br/>
                     <label className='check-box-container'>
-                      Receive a weekly mix of handpicked projects, plus occasional Kickstarter news.
+                      Receive a weekly mix of handpicked projects, plus occasional WeAreStarters news.
                       <input className='checkbox' type='checkbox' checked='checked' onChange={this.isChecked}/>
                       <span className='checkmark'></span>
                     </label>

@@ -25,7 +25,7 @@ class NavBar extends React.Component {
           <section className="nav-container">
             <section className="nav-bar-logo">
               <a className="logo-image-container" href="#/">
-                <img className="logo-image" src={"https://d3mlfyygrfdi2i.cloudfront.net/preview-logo-color.png"}/>
+                <img className="logo-image" src={"https://s3-us-west-1.amazonaws.com/fileupload-wearestarters-dev/Screen+Shot+2018-12-21+at+2.23.16+PM.png"}/>
               </a>
             </section>
             <section className="nav-left">
