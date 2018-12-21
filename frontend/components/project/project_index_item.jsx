@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import Footer from '../footer/footer';
+
+
 
 //props has {projects, users: undefined, creators, dispatch}
 const ProjectIndexItem = ({ project, currentUserId, deleteProject }) => {
@@ -21,6 +24,7 @@ const ProjectIndexItem = ({ project, currentUserId, deleteProject }) => {
 
 
   return (
+  
       <div className="index-item-container">
         <div className="index-item">
           <div className="index-item-image">
@@ -51,6 +55,7 @@ const ProjectIndexItem = ({ project, currentUserId, deleteProject }) => {
         </div>
         <div className="index-item-creator"></div>
       </div>
+
   );
 };
 

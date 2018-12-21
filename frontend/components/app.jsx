@@ -36,7 +36,6 @@ const App = () => (
       <Route path='/' component={GreetingContainer}/>
     </Switch>
 
-    <Footer />
   </div>
 );
 

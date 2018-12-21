@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import ProjectIndexItem from './project_index_item';
 import ProjectIndexItemContainer from './project_index_item_container';
 import CreateProjectFormContainer from './create_project_form_container';
+import Footer from '../footer/footer';
 
 
 class ProjectIndex extends React.Component {
@@ -85,6 +86,7 @@ class ProjectIndex extends React.Component {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

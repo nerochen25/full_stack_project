@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Footer from '../footer/footer';
 
 class ProjectShow extends React.Component {
   constructor(props){
@@ -38,8 +39,9 @@ class ProjectShow extends React.Component {
     let pledged_amount = `${(this.props.project.funding_goal/1.49).toFixed(2)}`.replace(/\d(?=(\d{3})+\.)/g, '$&,');
     let funding_goal = `${this.props.project.funding_goal - 0.00}`.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 
-    debugger
+
     return (
+      <div>
       <div className='campaign-state-live'>
         <div className='content-wrap'>
           <div className='main-show-content'>
@@ -102,7 +104,7 @@ class ProjectShow extends React.Component {
 
                         <Link to='/projects'
                           className="show-side-info-link-to-creator-projects">
-                           {this.props.creator.username}
+                           Creator
                         </Link>
                       </span>
 
@@ -261,6 +263,8 @@ class ProjectShow extends React.Component {
             </div>
         </div>
       </div>
+    </div>
+    <Footer />
     </div>
     );
   };

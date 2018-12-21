@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
+import Footer from '../footer/footer';
 
 
 class SessionForm extends React.Component {
@@ -113,6 +114,7 @@ class SessionForm extends React.Component {
 
     } else {
     return (
+      <div>
       <div className='form-container'>
       <div className='user-acct-form'>
       <div className='acct-form'>
@@ -153,6 +155,8 @@ class SessionForm extends React.Component {
         </footer>
       </div>
       </div>
+      </div>
+      <Footer />
       </div>
     );
 

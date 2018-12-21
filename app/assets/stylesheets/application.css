@@ -641,8 +641,8 @@ input text {
   background-color: #FFFFFF;
   border-width: 0.2rem;
   border-color: #9B9E9E;
-  border-top: 0.1rem solid #DCDEDD;
-  margin-top: 350rem;
+  border-top: 0.3rem solid #DCDEDD;
+  /* margin-top: 350rem; */
 }
 
 .subcategory-bar {
@@ -2552,4 +2552,12 @@ text-align: -webkit-match-parent;
 .grid-index-item-box-x {
   background-color: white;
   padding-top: 4rem;
+}
+
+/* form {
+  z-index: auto;
+} */
+
+.entire-new-form-page {
+  background-color: white;
 }

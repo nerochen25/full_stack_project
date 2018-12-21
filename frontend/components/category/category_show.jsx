@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import ProjectIndexItem from '../project/project_index_item';
+import Footer from '../footer/footer';
 
 class CategoryShow extends React.Component {
 
@@ -39,6 +40,7 @@ class CategoryShow extends React.Component {
     // }
 
     return (
+    <div>
     <div className="category-show-page">
       <div className="index-item-container-x">
         <div className="grid-index-item-container-x">
@@ -49,6 +51,8 @@ class CategoryShow extends React.Component {
           </div>
         </div>
       </div>
+    </div>
+    <Footer />
     </div>
     );
   }
