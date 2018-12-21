@@ -1,21 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 class CategoryBar extends React.Component {
   constructor(props) {
     super(props);
-  }
-
-  componentDidMount() {
-    // this.props.fetchCategories();
   };
 
   render() {
     let categories = Object.values(this.props.categories).map((category) => {
       return (
-        <li key={`${category.id}`} className="category-list">
-          <a className="category-a">{category.name}</a>
+        <Link key={`${category.id}`} to={`/categories/${category.id}`}>
+        <li className="category-list">
+          <p className="category-a">{category.name}</p>
         </li>
-      )
+      </Link>
+    );
     });
 
     return (

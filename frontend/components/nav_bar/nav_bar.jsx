@@ -34,9 +34,11 @@ class NavBar extends React.Component {
             </section>
             <section className="nav-right">
               <HashLink to='#search-bar'>
+                <Link to='/'>
                 <button className="search-btn">
                   Search <br /> <i className="fa fa-search"></i>
                 </button>
+                </Link>
               </HashLink>
               {logIn}
             </section>

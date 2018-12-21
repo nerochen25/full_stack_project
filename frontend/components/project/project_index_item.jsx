@@ -24,7 +24,7 @@ const ProjectIndexItem = ({ project, currentUserId, deleteProject }) => {
       <div className="index-item-container">
         <div className="index-item">
           <div className="index-item-image">
-            <Link to={`/projects/${project.id}`}><img src={`${project.photo}`}></img></Link>
+            <Link to={`/projects/${project.id}`}><img className="index-project-image" src={`${project.photo}`}></img></Link>
           </div>
           <div className="index-item-title">
             <Link to={`/projects/${project.id}`}>{project.title}</Link>
