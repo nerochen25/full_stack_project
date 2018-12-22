@@ -190,6 +190,32 @@ Wolfgang_Mustain = User.create!(
   password: 'password'
 )
 
+project20 = Project.create!(
+  title: 'Hadron Gamma Ray Watch',
+  description: 'After many years of photographing a wide array of subjects, I was struck by the graphic beauty of the Hadron Collider ,the worlds largest and most powerful particle collider. This inspired me to design a watch devoted to its beauty .THE HARDRON GAMMA RAY.',
+  creator_id: Wolfgang_Mustain.id,
+  category_id: fashion.id,
+  funding_goal: 100080,
+  due_date: Time.new,
+  reward_offered: true
+)
+
+project20Photo = open("https://s3-us-west-1.amazonaws.com/fileupload-wearestarters-dev/watch.jpg")
+project20.photo.attach(io: project20Photo, filename: "watch.png")
+
+project19 = Project.create!(
+  title: 'Help Re-Launch D.C.s Best Food Truck!',
+  description: 'Swizzler needs help bringing Real American Eats (and grass-fed beef burger deliciousness) to Washington, D.C.!',
+  creator_id: Jesse_Konig.id,
+  category_id: food.id,
+  funding_goal: 80000,
+  due_date: Time.new,
+  reward_offered: true
+)
+
+project19Photo = open("https://s3-us-west-1.amazonaws.com/fileupload-wearestarters-dev/hotdog.jpg")
+project19.photo.attach(io: project19Photo, filename: "hotdog.png")
+
 project11 = Project.create!(
   title: 'SuperKids! Mental Health Support Coloring Book',
   description: 'An interactive book for hospitalized children, providing mental health help for fear, depression, anxiety, anger, and physical pain.',
@@ -410,32 +436,6 @@ project18 = Project.create!(
 
 project18Photo = open("https://s3-us-west-1.amazonaws.com/fileupload-wearestarters-dev/Pulo.jpg")
 project18.photo.attach(io: project18Photo, filename: "pulo.png")
-
-project19 = Project.create!(
-  title: 'Help Re-Launch D.C.s Best Food Truck!',
-  description: 'Swizzler needs help bringing Real American Eats (and grass-fed beef burger deliciousness) to Washington, D.C.!',
-  creator_id: Jesse_Konig.id,
-  category_id: food.id,
-  funding_goal: 80000,
-  due_date: Time.new,
-  reward_offered: true
-)
-
-project19Photo = open("https://s3-us-west-1.amazonaws.com/fileupload-wearestarters-dev/hotdog.jpg")
-project19.photo.attach(io: project19Photo, filename: "hotdog.png")
-
-project20 = Project.create!(
-  title: 'Hadron Gamma Ray Watch',
-  description: 'After many years of photographing a wide array of subjects, I was struck by the graphic beauty of the Hadron Collider ,the worlds largest and most powerful particle collider. This inspired me to design a watch devoted to its beauty .THE HARDRON GAMMA RAY.',
-  creator_id: Wolfgang_Mustain.id,
-  category_id: fashion.id,
-  funding_goal: 100080,
-  due_date: Time.new,
-  reward_offered: true
-)
-
-project20Photo = open("https://s3-us-west-1.amazonaws.com/fileupload-wearestarters-dev/watch.jpg")
-project20.photo.attach(io: project20Photo, filename: "watch.png")
 
 
 project4 = Project.create!(

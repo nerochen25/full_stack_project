@@ -28,7 +28,7 @@ class ProjectIndex extends React.Component {
       });
     } else {
       let searchedProjects = this.props.projects.filter((project) => {
-        return project.title.toLowerCase().includes(query) || project.description.toLowerCase().includes(query)
+        return project.title.toLowerCase().includes(query) || project.description.toLowerCase().includes(query);
       });
       this.setState({ projects: searchedProjects });
     }

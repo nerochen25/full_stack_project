@@ -1,7 +1,7 @@
 class Project < ApplicationRecord
   # added creator, and category
   validates :title, :description, :creator_id, :category_id, :funding_goal, :due_date, presence: true
-  validate :ensure_photo
+  # validate :ensure_photo
 
   belongs_to :creator,
     class_name: 'User',
