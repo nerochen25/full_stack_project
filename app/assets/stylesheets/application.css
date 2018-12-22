@@ -1016,7 +1016,7 @@ ul {
   padding: 0;
   font-size: 100%;
   vertical-align: baseline;
-  background-color: #FBFBFA;
+  background-color: white;
   height: 1180px;
 }
 
@@ -1025,7 +1025,7 @@ ul {
 }
 
 .main-show-content {
-  background-color: #FBFBFA;
+  background-color: white;
   border: 0;
   margin: 0;
   padding: 0;
