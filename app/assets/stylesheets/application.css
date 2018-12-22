@@ -2279,6 +2279,8 @@ textarea {
   text-align: center;
   border-radius: 10px;
   margin-bottom: -1rem;
+  color: white;
+  font-weight: bold;
 
 }
 
