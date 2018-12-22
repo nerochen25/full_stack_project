@@ -2612,3 +2612,7 @@ text-align: -webkit-match-parent;
   color: red;
   font-size: 14px;
 }
+
+.show-project-side-creator-info {
+  min-width: 80px;
+}
