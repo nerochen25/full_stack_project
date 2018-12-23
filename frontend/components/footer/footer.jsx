@@ -85,8 +85,19 @@ class Footer extends React.Component {
                     </li>
                   </ul>
                 </section>
+
               </div>
 
+            </div>
+            <div className="github-linkedin">
+              <a className="github" href="https://github.com/nerochen25">
+                <img className="github-logo" src="https://img.icons8.com/metro/1600/github.png"/>
+              </a>
+              {'                                      '}
+              <a className="linkedin" href="https://www.linkedin.com/in/nerochen25">
+                <img className="linkedin-logo" src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png"/>
+
+              </a>
             </div>
           </div>
         </div>

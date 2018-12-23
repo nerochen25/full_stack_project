@@ -2616,3 +2616,17 @@ text-align: -webkit-match-parent;
 .show-project-side-creator-info {
   min-width: 80px;
 }
+
+.github-logo {
+  width: 60px;
+}
+
+.linkedin-logo {
+  width: 60px;
+};
+
+.github-linkedin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
