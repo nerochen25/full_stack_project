@@ -2553,13 +2553,13 @@ text-align: -webkit-match-parent;
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #DCDEDD;
+  /* background: #DCDEDD; */
   size: 1px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  /* background: #555; */
 }
 
 .category-show-page {
