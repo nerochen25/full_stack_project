@@ -2548,7 +2548,7 @@ text-align: -webkit-match-parent;
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  /* background: #f1f1f1; */
 }
 
 /* Handle */
