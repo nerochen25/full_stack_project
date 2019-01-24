@@ -84,6 +84,13 @@ class ProjectForm extends React.Component {
     console.log(this.state.photoFile);
     console.log(this.state.photoUrl);
 
+    let isCreate;
+    if (this.props.formType === 'Save') {
+      isCreate = <a></a>
+    } else {
+      isCreate = <HashLink className="grid-content-box1-btn" to="#create-project">Start a project</HashLink>
+    }
+
     return (
       <div className="entire-new-form-page">
         <section className="section-project-form-1">
@@ -94,7 +101,7 @@ class ProjectForm extends React.Component {
                   <h1 className="grid-content-box1-title">
                     Bring your creative project to life.
                   </h1>
-                  <HashLink className="grid-content-box1-btn" to="#create-project">Start a project</HashLink>
+                  {isCreate}
 
               </div>
               </div>
