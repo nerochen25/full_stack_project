@@ -81,8 +81,6 @@ class ProjectForm extends React.Component {
         <option key={category.id} value={category.id}>{category.name}</option>
       );
     });
-    console.log(this.state.photoFile);
-    console.log(this.state.photoUrl);
 
     let isCreate;
     if (this.props.formType === 'Save') {
