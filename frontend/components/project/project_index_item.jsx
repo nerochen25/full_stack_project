@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Footer from '../footer/footer';
+import { HashLink } from 'react-router-hash-link';
+
 
 const ProjectIndexItem = ({ project, currentUserId, deleteProject }) => {
   const button = project.creator_id === currentUserId
@@ -8,7 +10,7 @@ const ProjectIndexItem = ({ project, currentUserId, deleteProject }) => {
       <div className="delete-edit-btns">
         <br />
         <button className="project-delete-edit-btn">
-          <Link to={`/projects/${project.id}/edit`}>Edit Project</Link>
+          <Link to={`/projects/${project.id}/edit`} >Edit Project</Link>
         </button>
         <br />
         <br />
