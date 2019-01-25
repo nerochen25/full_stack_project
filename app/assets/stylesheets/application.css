@@ -958,10 +958,10 @@ ul {
 }
 
 .project-delete-edit-btn {
-  width: 22%;
+  width: 25%;
   background-color: #009E74;
   color: #FFFFFF !important;
-  height: 4.2rem;
+  height: 3.5rem;
   line-height: 4.2rem;
   padding: 0 1.8rem;
   font-size: 1rem;
@@ -2364,7 +2364,7 @@ textarea {
   position: relative;
   margin-bottom: 0rem;
   display: block;
-  height: 550px;
+  height: 346px;
   width: 520px;
   overflow: scroll;
   scroll-behavior: smooth;
@@ -2393,7 +2393,7 @@ a {
   font-family: 'Quicksand', sans-serif;
   padding-top: 1.8rem;
   color: #282828;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 
 }
 .index-item-title:hover {
@@ -2405,7 +2405,7 @@ a {
 .index-item-description {
   font-family: 'Quicksand', sans-serif;
   color: #282828;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .welcome-user-name {
