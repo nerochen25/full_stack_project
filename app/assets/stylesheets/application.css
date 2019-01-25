@@ -1129,7 +1129,7 @@ ul {
 
 .index-project-image {
   border-radius: 10px;
-  width:500px;
+  width:550px;
 }
 
 /* .show-image-div {
@@ -2364,8 +2364,8 @@ textarea {
   position: relative;
   margin-bottom: 0rem;
   display: block;
-  height: 346px;
-  width: 520px;
+  height: 377px;
+  width: 570px;
   overflow: scroll;
   scroll-behavior: smooth;
 }
