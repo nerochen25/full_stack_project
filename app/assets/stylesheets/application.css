@@ -2231,11 +2231,10 @@ textarea {
   background-color: black;
   color: white;
   text-align: center;
-  /* border-radius: 10px; */
   margin-bottom: -1rem;
   color: white;
   font-weight: bold;
-
+  font-size: 14pt;
 }
 
 .search-box-container {
