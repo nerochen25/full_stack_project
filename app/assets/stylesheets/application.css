@@ -249,7 +249,7 @@ h2 {
   height: 43px;
 }
 .logo-image {
-  width: 273px;
+  width: 240px;
   height: auto;
 }
 
@@ -2459,6 +2459,7 @@ box-sizing: inherit;
   margin: 0;
   list-style: none;
   /* font-weight: 400; */
+  font-size: 14pt;
 }
 
 .category-list {
