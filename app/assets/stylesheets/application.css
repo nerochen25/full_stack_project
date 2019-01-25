@@ -277,7 +277,7 @@ h2 {
   display: flex;
   background-color: #FFFFFF;
   color: #282828;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .explore-btn:hover {
@@ -291,7 +291,7 @@ h2 {
   -webkit-box-align: center;
   align-items: center;
   color: #282828;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .start-a-project-link:hover {
@@ -958,10 +958,10 @@ ul {
 }
 
 .project-delete-edit-btn {
-  width: 25%;
+  width: 28%;
   background-color: #009E74;
   color: #FFFFFF !important;
-  height: 3.5rem;
+  height: 3rem;
   line-height: 4.2rem;
   padding: 0 1.8rem;
   font-size: 1rem;
@@ -2274,7 +2274,7 @@ textarea {
   background-color: black;
   color: white;
   text-align: center;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   margin-bottom: -1rem;
   color: white;
   font-weight: bold;
@@ -2467,8 +2467,8 @@ a {
 
 
 .grid-categories-container {
-  padding-left: 250px;
-    padding-right: 250px;
+  padding-left: 120px;
+    padding-right: 120px;
     /* max-width: 1366px; */
     margin-left: auto;
     margin-right: auto;
