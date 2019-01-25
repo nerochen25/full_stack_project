@@ -1762,30 +1762,30 @@ font-size: 1.2rem;
 }
 
 .show-back-this-project-btn {
-  margin-bottom: 1.8rem;
-  display: block;
-  box-sizing: inherit;
-  background-color: #009E74;
-  color: #FFFFFF !important;
-  height: 3.8rem;
-  line-height: 4.8rem;
-  padding: 9px 2.4rem;
-  font-size: 1.3rem;
-  font-weight: 500;
-  transition: all 0.25s ease-in-out !important;
-  text-align: center;
-  cursor: pointer;
-  border: none;
-  position: relative;
-  -webkit-appearance: none;
-  border-radius: 0;
-  text-decoration: none;
-  margin: 0;
-  /* vertical-align: baseline; */
-  font: inherit;
-  margin-right: 45.8rem;
-  font-size: 74%;
-  width: 950px;
+      /* margin-bottom: 1.8rem; */
+      display: block;
+      box-sizing: inherit;
+      background-color: #009E74;
+      color: #FFFFFF !important;
+      height: 3.8rem;
+      line-height: 4.8rem;
+      padding: 9px 2.4rem;
+      font-size: 1.3rem;
+      /* font-weight: 500; */
+      transition: all 0.25s ease-in-out !important;
+      /* text-align: center; */
+      cursor: pointer;
+      /* border: none; */
+      /* position: relative; */
+      -webkit-appearance: none;
+      border-radius: 0;
+      text-decoration: none;
+      margin: 0;
+      /* vertical-align: baseline; */
+      font: inherit;
+      /* margin-right: 45.8rem; */
+      font-size: 86%;
+      width: 500px;
 }
 
 /* .show-back-this-project-btn::after {
