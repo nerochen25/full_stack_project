@@ -74,7 +74,7 @@ class ProjectIndex extends React.Component {
           <div className="grid-index-item-container">
             <div className="grid-index-item-box">
               <div className="index-upper-bar">
-                <a>FRESH FAVORITES   </a><a className="index-view-more">View more</a>
+                <a className="fresh-favorites">FRESH FAVORITES   </a><a className="index-view-more">View more</a>
               </div>
               <br />
               <div className="grid-index-items">

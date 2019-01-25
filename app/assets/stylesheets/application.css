@@ -2376,6 +2376,7 @@ a {
 
 .index-view-more {
   color: blue;
+  font-size: 1rem;
 }
 
 .index-view-more:hover {
@@ -2618,4 +2619,8 @@ text-align: -webkit-match-parent;
   flex-direction: row;
   justify-content: space-between;
   width: 150px;
+}
+
+.fresh-favorites {
+  font-size: 1rem;
 }
