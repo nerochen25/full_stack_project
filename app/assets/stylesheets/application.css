@@ -2365,13 +2365,9 @@ textarea {
   margin-bottom: 0rem;
   display: block;
   height: 550px;
-  width: 700px;
-
-  /* max-width: 100%;
-  height: 500px; */
+  width: 520px;
   overflow: scroll;
   scroll-behavior: smooth;
-  /* background-color: black; */
 }
 
 a {
