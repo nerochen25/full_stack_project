@@ -10,7 +10,7 @@ class User < ApplicationRecord
   
   has_many :pledges, dependent: :destroy,
     class_name: 'Pledge',
-    foreign_key: :supportor_id
+    foreign_key: :supporter_id
 
   has_many :supporting_projects, dependent: :destroy,
     through: :pledges,

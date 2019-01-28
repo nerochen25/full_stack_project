@@ -12,6 +12,14 @@ class Project < ApplicationRecord
   belongs_to :category,
     class_name: 'Category',
     foreign_key: :category_id
+  
+  has_many :pledges, dependent: :destroy,
+    class_name: 'Pledge',
+    foreign_key: :project_id
+  
+  has_many :backers,
+    through: :pledges,
+    source: :supporter
 
 
   def ensure_photo
@@ -20,19 +28,12 @@ class Project < ApplicationRecord
     end
   end
 
-  # has_many: :pledges, dependent: :destroy,
-  #   class_name: 'Pledge',
-  #   foreign_key: :project_id
-  #
-  # has_many :backers
-  #   through: :pledges,
-  #   source: :supporter
   #
   # has_many :rewards, dependent: :destroy
   #   class_name: 'Reward',
   #   foreign_key: :project_id
 
-  # def backer_count
-  #   self.pledges.count
-  # end
+  def backer_count
+    self.pledges.count
+  end
 end
