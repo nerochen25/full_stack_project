@@ -212,6 +212,7 @@ h2 {
   background-color: #FFFFFF;
   border-color: #E8E8E8;
   border-bottom: 0.05rem solid #DCDEDD;
+  overflow: auto;
 }
 
 .nav-bar {
@@ -1141,6 +1142,7 @@ ul {
   display: block;
   margin: 0 auto;
   margin-top: 10px;
+  max-width: 750px;
 }
 
 .grid-show-info-container {
