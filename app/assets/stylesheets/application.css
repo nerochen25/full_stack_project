@@ -1136,7 +1136,7 @@ ul {
 .show-project-image {
   z-index: 2;
   box-sizing: inherit;
-  height: 100%;
+  height: auto;
   align-items: center;
   image-resolution: from-image;
   display: block;
