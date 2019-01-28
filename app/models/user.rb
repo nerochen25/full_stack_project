@@ -13,7 +13,7 @@ class User < ApplicationRecord
     foreign_key: :supportor_id
 
   has_many :supporting_projects, dependent: :destroy,
-  through: :pledges
+    through: :pledges,
     source: :project
 
 
