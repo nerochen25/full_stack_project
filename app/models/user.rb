@@ -8,13 +8,13 @@ class User < ApplicationRecord
     class_name: 'Project',
     foreign_key: :creator_id
   
-  # has_many :pledges, dependent: :destroy,
-  #   class_name: 'Pledge',
-  #   foreign_key: :supportor_id
+  has_many :pledges, dependent: :destroy,
+    class_name: 'Pledge',
+    foreign_key: :supportor_id
 
-  # has_many :supporting_projects, dependent: :destroy,
-  #   through: :pledges,
-  #   source: :project
+  has_many :supporting_projects, dependent: :destroy,
+  through: :pledges
+    source: :project
 
 
   attr_reader :password
