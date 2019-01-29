@@ -18,6 +18,9 @@ import Footer from './footer/footer';
 import CategoryBarContainer from './category/category_bar_container';
 import CategoryShowContainer from './category/category_show_container';
 
+import CreatePledgeFormContainer from './pledge/create_pledge_form_container';
+
+
 const App = () => (
 
   <div className='main-content'>
@@ -29,6 +32,7 @@ const App = () => (
       <AuthRoute exact path="/login" component={LogInFormContainer} />
 
       <ProtectedRoute path="/projects/create" component={CreateProjectFormContainer} />
+      <ProtectedRoute exact path="/projects/:id/pledge" component={CreatePledgeFormContainer} />
       <ProtectedRoute exact path="/projects/:id/edit" component={EditProjectFormContainer} />
       <Route exact path="/categories/:id" component={CategoryShowContainer} />
       <Route exact path="/projects" component={ProjectIndexContainer} />

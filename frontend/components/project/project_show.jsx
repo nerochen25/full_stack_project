@@ -174,9 +174,9 @@ class ProjectShow extends React.Component {
               <div className="grid-show-backing-reminding-btns-container">
                 <div className="grid-show-backing-reminding-btns-box">
                   <div className="show-backing-reminding-btns-box">
-                    <a className="show-back-this-project-btn">
-                      Back this project
-                    </a>
+                    <Link className="show-back-this-project-btn" to={`/projects/${this.props.match.params.id}/pledge`}>
+                        Back this project
+                    </Link>
                     {buttons}
                     <div className="show-remind-me-btn-and-sharing-icons">
                       <div className="show-remind-me-btn-div">

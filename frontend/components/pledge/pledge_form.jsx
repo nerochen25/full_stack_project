@@ -9,7 +9,11 @@ class CreatePledgeForm extends React.Component {
   }
 
   render() {
-      
+      return (
+        <div>
+         <h1>Pledge form here !!!</h1>
+        </div>
+      )
   }
 }
 
