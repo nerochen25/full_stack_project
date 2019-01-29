@@ -7,8 +7,6 @@ const mapStateToProps = (state, ownProps) => {
     const project = state.entities.projects[ownProps.match.params.id];
     const projectId = project.id;
     const creator = state.entities.users[project.creator_id];
-
-    debugger
     return {
         pledge: {
             amount: '',
