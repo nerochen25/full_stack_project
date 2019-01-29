@@ -1790,6 +1790,10 @@ font-size: 1.2rem;
       width: 500px;
 }
 
+.show-back-this-project-btn:hover {
+  background: #000000;
+}
+
 /* .show-back-this-project-btn::after {
   content: '';
   position: absolute;

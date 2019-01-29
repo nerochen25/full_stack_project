@@ -29,7 +29,7 @@ class CreatePledgeForm extends React.Component {
       return (
         <div className="pledge-form">
           <form onSubmit={this.handleSubmit}>
-              <h1 className='support-title'>Support this project</h1>
+              <h1>Support this project</h1>
               <div>                
                 <p>Pledge amount</p>
                 <div>
