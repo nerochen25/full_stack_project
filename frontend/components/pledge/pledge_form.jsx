@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import Footer from '../footer/footer';
 
 
 class CreatePledgeForm extends React.Component {
@@ -10,8 +11,11 @@ class CreatePledgeForm extends React.Component {
 
   render() {
       return (
-        <div>
-         <h1>Pledge form here !!!</h1>
+        <div className="pledge-form">
+          <h1>Pledge form here !!!</h1>
+          <form>
+            
+          </form>
         </div>
       )
   }
