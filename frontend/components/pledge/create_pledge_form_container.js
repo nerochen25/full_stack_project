@@ -23,6 +23,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
     return {
         action: pledge => dispatch(createPledge(pledge)),
+        fetchPledges: () => dispatch(fetchPledges())
     };
 };
 

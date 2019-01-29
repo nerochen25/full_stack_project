@@ -660,7 +660,7 @@ input text {
   margin-right: auto;
   box-sizing: border-box;
   font-size: 14px;
-  border-top: 0.5px solid #9B9E9E;
+  /* border-top: 0.5px solid #9B9E9E; */
 }
 
 .grid-row {

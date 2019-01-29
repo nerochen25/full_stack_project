@@ -32,11 +32,11 @@ const App = () => (
       <AuthRoute exact path="/login" component={LogInFormContainer} />
 
       <ProtectedRoute path="/projects/create" component={CreateProjectFormContainer} />
-      <ProtectedRoute exact path="/projects/:id/pledge" component={CreatePledgeFormContainer} />
       <ProtectedRoute exact path="/projects/:id/edit" component={EditProjectFormContainer} />
       <Route exact path="/categories/:id" component={CategoryShowContainer} />
       <Route exact path="/projects" component={ProjectIndexContainer} />
       <Route exact path="/projects/:id" component={ProjectShowContainer} />
+      <ProtectedRoute exact path="/projects/:id/pledge" component={CreatePledgeFormContainer} />
       <Route path='/' component={GreetingContainer}/>
     </Switch>
 
