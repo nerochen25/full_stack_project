@@ -28,21 +28,16 @@ class CreatePledgeForm extends React.Component {
   render() {
       return (
         <div className="pledge-form">
-          <h1>Pledge form here !!!</h1>
           <form onSubmit={this.handleSubmit}>
               <h1 className='support-title'>Support this project</h1>
-              <div className='pledge-box'>
-                <label className='check-container'>Make a pledge
-                <input type='checkbox' />
-                <span className='checkmark'></span>
-                </label>
-                <span></span>
+              <div>                
                 <p>Pledge amount</p>
-                <div className='amount-box-container'>
+                <div>
                   <p>$</p>
-                  <input type='text' value={this.state.amount} onChange={this.update()}></input>
+                  <input className="pledge_amount_input" type='text' value={this.state.amount} onChange={this.update()}></input>
                 </div>
                 <button>{this.props.buttonText}</button><br></br>
+                <input className="pledge_amount_submit_btn" type="submit" value="Submit"/>
               </div>
             </form>
         </div>

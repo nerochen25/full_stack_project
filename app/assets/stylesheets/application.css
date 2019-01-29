@@ -346,7 +346,7 @@ h2 {
   display: block;
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
-  background-color: #F7F7F6;
+  background-color:white;
 }
 
 .user-acct-form {
@@ -2584,3 +2584,24 @@ text-align: -webkit-match-parent;
 .fresh-favorites {
   font-size: 1rem;
 }
+
+.pledge-form {
+  background: white;
+  margin: 0 auto;
+  /* padding-left: 60px;
+  padding-right: 60px; */
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  /* margin-bottom: 70rem; */
+}
+
+.pledge_amount_input {
+  width: 50%;
+}
+
+.pledge_amount_submit_btn {
+  width: 30%;
+}
+
